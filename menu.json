@@ -1,4 +1,10 @@
 {
+  "metadata": {
+    "schemaVersion": "1.1.0",
+    "lastUpdated": "2026-08-11",
+    "locale": "en-IN",
+    "currencyCode": "INR"
+  },
   "salon": {
     "id": 1,
     "name": "OSMO Salon",
@@ -15,7 +21,7 @@
     "longitude": 85.3612,
     "openingHours": "08:00 AM – 09:30 PM",
     "workingDays": "Monday – Sunday",
-    "mapsEmbedUrl": "https://www.google.com/maps/embed/v1/place?key=AIzaSyD-PLACEHOLDER&q=Pugmil+Rd+Near+Kallu+Chowk+Hazaribagh+Jharkhand",
+    "mapsEmbedUrl": "https://maps.google.com/maps?q=23.9988,85.3612&z=16&output=embed",
     "mapsSearchUrl": "https://www.google.com/maps/search/OSMO+Modern+Salon+Pugmil+Hazaribagh+Jharkhand",
     "playStoreUrl": "https://play.google.com/store/apps/details?id=com.osmo.android",
     "social": {
@@ -26,33 +32,66 @@
   "banners": [
     {
       "id": 1,
-      "imageUrl": "https://images.unsplash.com/photo-1585747860715-2ba37e788b70?w=800&q=80",
+      "imageUrl": "https://images.unsplash.com/photo-1585747860715-2ba37e788b70?auto=format&fit=crop&w=800&q=80",
       "title": "Experience Premium\nGrooming",
-      "subtitle": "Hair • Beard • Facial • Spa"
+      "subtitle": "Hair • Beard • Facial • Spa",
+      "category": "SERVICES",
+      "serviceType": "SALON",
+      "isAvailable": true
     },
     {
       "id": 2,
-      "imageUrl": "https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=800&q=80",
+      "imageUrl": "https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=800&q=80",
       "title": "Expert Hair Styling",
-      "subtitle": "Crafted with precision & care"
+      "subtitle": "Crafted with precision & care",
+      "category": "HAIR",
+      "serviceType": "SALON",
+      "isAvailable": true
     },
     {
       "id": 3,
-      "imageUrl": "https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=800&q=80",
+      "imageUrl": "https://images.unsplash.com/photo-1621605815971-fbc98d665033?auto=format&fit=crop&w=800&q=80",
       "title": "Beard Grooming\nRedefined",
-      "subtitle": "Shape your style with confidence"
+      "subtitle": "Shape your style with confidence",
+      "category": "BEARD",
+      "serviceType": "SALON",
+      "isAvailable": true
     },
     {
       "id": 4,
-      "imageUrl": "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=800&q=80",
+      "imageUrl": "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=800&q=80",
       "title": "Luxury Facial\nTreatments",
-      "subtitle": "Radiant skin, refreshed look"
+      "subtitle": "Radiant skin, refreshed look",
+      "category": "FACIAL",
+      "serviceType": "SALON",
+      "isAvailable": true
     },
     {
       "id": 5,
-      "imageUrl": "https://images.unsplash.com/photo-1560066984-138daaa4e4e1?w=800&q=80",
       "title": "The Art of\nRelaxation",
-      "subtitle": "Spa & massage for mind & body"
+      "imageUrl": "https://images.unsplash.com/photo-1560066984-138daaa4e4e1?auto=format&fit=crop&w=800&q=80",
+      "subtitle": "Spa & massage for mind & body",
+      "category": "SPA",
+      "serviceType": "SALON",
+      "isAvailable": true
+    },
+    {
+      "id": 6,
+      "title": "Summer Refresh",
+      "subtitle": "Get 20% off on all Hair Spa services",
+      "imageUrl": "https://images.unsplash.com/photo-1560066984-138daaa4e4e1?auto=format&fit=crop&w=1200&q=80",
+      "category": "OFFERS",
+      "serviceType": "SALON",
+      "isAvailable": true
+    },
+    {
+      "id": 7,
+      "title": "Home Grooming",
+      "subtitle": "Professional stylists at your doorstep",
+      "imageUrl": "https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=1200&q=80",
+      "category": "HOME",
+      "serviceType": "SALON",
+      "isAvailable": true
     }
   ],
   "quickServices": [
@@ -61,56 +100,70 @@
       "name": "Hair Cut",
       "description": "Precision cut tailored to your face shape by expert stylists.",
       "price": 150,
-      "imageUrl": "https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=400&q=80",
-      "category": "HAIR"
+      "imageUrl": "https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=400&q=80",
+      "category": "HAIR",
+      "serviceType": "SALON",
+      "isAvailable": true
     },
     {
       "id": 2,
       "name": "Beard Trim",
       "description": "Expert beard styling, shaping, and grooming for a sharp look.",
       "price": 80,
-      "imageUrl": "https://images.unsplash.com/photo-1599011176306-4a96f1516d4d?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      "category": "BEARD"
+      "imageUrl": "https://images.unsplash.com/photo-1599011176306-4a96f1516d4d?auto=format&fit=crop&w=387&q=80",
+      "category": "BEARD",
+      "serviceType": "SALON",
+      "isAvailable": true
     },
     {
       "id": 3,
       "name": "Facial",
       "description": "Deep cleansing facial for refreshed, glowing skin.",
       "price": 699,
-      "imageUrl": "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=400&q=80",
-      "category": "FACIAL"
+      "imageUrl": "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=400&q=80",
+      "category": "FACIAL",
+      "serviceType": "SALON",
+      "isAvailable": true
     },
     {
       "id": 4,
       "name": "Hair Spa",
       "description": "Nourishing spa treatment for healthy, lustrous hair.",
       "price": 499,
-      "imageUrl": "https://images.unsplash.com/photo-1571454870646-86bf1e5b25ae?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      "category": "SPA"
+      "imageUrl": "https://images.unsplash.com/photo-1571454870646-86bf1e5b25ae?auto=format&fit=crop&w=387&q=80",
+      "category": "SPA",
+      "serviceType": "SALON",
+      "isAvailable": true
     },
     {
       "id": 5,
       "name": "Hair Color",
       "description": "Vibrant, long-lasting color using premium products.",
       "price": 699,
-      "imageUrl": "https://images.unsplash.com/photo-1562322140-8baeececf3df?w=400&q=80",
-      "category": "HAIR"
+      "imageUrl": "https://images.unsplash.com/photo-1562322140-8baeececf3df?auto=format&fit=crop&w=400&q=80",
+      "category": "HAIR",
+      "serviceType": "SALON",
+      "isAvailable": true
     },
     {
       "id": 6,
       "name": "Massage",
       "description": "Relaxing full body massage to relieve stress and tension.",
       "price": 199,
-      "imageUrl": "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=400&q=80",
-      "category": "MASSAGE"
+      "imageUrl": "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=400&q=80",
+      "category": "MASSAGE",
+      "serviceType": "SALON",
+      "isAvailable": true
     },
     {
       "id": 7,
       "name": "Kids Haircut",
       "description": "Fun, gentle haircuts for the little ones.",
       "price": 120,
-      "imageUrl": "https://plus.unsplash.com/premium_photo-1677098576397-d3403bf838a0?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      "category": "KIDS"
+      "imageUrl": "https://plus.unsplash.com/premium_photo-1677098576397-d3403bf838a0?auto=format&fit=crop&w=1374&q=80",
+      "category": "KIDS",
+      "serviceType": "SALON",
+      "isAvailable": true
     }
   ],
   "popularServices": [
@@ -119,99 +172,110 @@
       "name": "Premium Hair Cut",
       "description": "Luxury hair cut with hot towel, scalp massage & premium finish.",
       "price": 250,
-      "imageUrl": "https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=400&q=80",
+      "imageUrl": "https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=400&q=80",
       "category": "HAIR",
-      "isPopular": true
+      "serviceType": "SALON",
+      "isAvailable": true
     },
     {
       "id": 102,
       "name": "Hair Spa",
       "description": "Deep conditioning spa with steam & nourishing serum treatment.",
       "price": 499,
-      "imageUrl": "https://images.unsplash.com/photo-1571454870646-86bf1e5b25ae?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "imageUrl": "https://images.unsplash.com/photo-1571454870646-86bf1e5b25ae?auto=format&fit=crop&w=387&q=80",
       "category": "SPA",
-      "isPopular": true
+      "serviceType": "SALON",
+      "isAvailable": true
     },
     {
       "id": 103,
       "name": "Hair Color",
       "description": "Full head or highlight coloring using L'Oreal professional products.",
       "price": 699,
-      "imageUrl": "https://images.unsplash.com/photo-1562322140-8baeececf3df?w=400&q=80",
+      "imageUrl": "https://images.unsplash.com/photo-1562322140-8baeececf3df?auto=format&fit=crop&w=400&q=80",
       "category": "HAIR",
-      "isPopular": true
+      "serviceType": "SALON",
+      "isAvailable": true
     },
     {
       "id": 104,
       "name": "Facial Treatment",
       "description": "Advanced skin rejuvenation with premium serums and massage.",
       "price": 699,
-      "imageUrl": "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=400&q=80",
+      "imageUrl": "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=400&q=80",
       "category": "FACIAL",
-      "isPopular": true
+      "serviceType": "SALON",
+      "isAvailable": true
     },
     {
       "id": 105,
       "name": "Cleanup",
       "description": "Quick refresh with deep pore cleansing and moisturising mask.",
       "price": 399,
-      "imageUrl": "https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?w=400&q=80",
+      "imageUrl": "https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?auto=format&fit=crop&w=400&q=80",
       "category": "FACIAL",
-      "isPopular": true
+      "serviceType": "SALON",
+      "isAvailable": true
     },
     {
       "id": 106,
       "name": "D-Tan",
       "description": "Effective tan removal treatment for even skin tone.",
       "price": 599,
-      "imageUrl": "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=400&q=80",
+      "imageUrl": "https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=400&q=80",
       "category": "FACIAL",
-      "isPopular": true
+      "serviceType": "SALON",
+      "isAvailable": true
     },
     {
       "id": 107,
       "name": "Beard Styling",
       "description": "Expert beard shaping, hot towel & precision styling.",
       "price": 150,
-      "imageUrl": "https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=400&q=80",
+      "imageUrl": "https://images.unsplash.com/photo-1621605815971-fbc98d665033?auto=format&fit=crop&w=400&q=80",
       "category": "BEARD",
-      "isPopular": true
+      "serviceType": "SALON",
+      "isAvailable": true
     },
     {
       "id": 108,
       "name": "Head Massage",
       "description": "Therapeutic scalp and head massage using aromatic oils.",
       "price": 199,
-      "imageUrl": "https://plus.unsplash.com/premium_photo-1726776133324-540344f791d8?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "imageUrl": "https://plus.unsplash.com/premium_photo-1726776133324-540344f791d8?auto=format&fit=crop&w=870&q=80",
       "category": "MASSAGE",
-      "isPopular": true
+      "serviceType": "SALON",
+      "isAvailable": true
     },
     {
       "id": 109,
       "name": "Kids Haircut",
       "description": "Gentle, fun cuts for kids of all ages with care and patience.",
       "price": 120,
-      "imageUrl": "https://plus.unsplash.com/premium_photo-1677098576397-d3403bf838a0?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "imageUrl": "https://plus.unsplash.com/premium_photo-1677098576397-d3403bf838a0?auto=format&fit=crop&w=1374&q=80",
       "category": "KIDS",
-      "isPopular": true
+      "serviceType": "SALON",
+      "isAvailable": true
     },
     {
       "id": 110,
       "name": "Groom Package",
       "description": "Complete groom makeover: haircut + beard + facial + massage.",
       "price": 1499,
-      "imageUrl": "https://plus.unsplash.com/premium_photo-1711299478774-39fde03c2daf?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "imageUrl": "https://plus.unsplash.com/premium_photo-1711299478774-39fde03c2daf?auto=format&fit=crop&w=387&q=80",
       "category": "PACKAGE",
-      "isPopular": true
+      "serviceType": "SALON",
+      "isAvailable": true
     },
     {
       "id": 111,
       "name": "Bridal Groom",
       "description": "Exclusive bridal groom package for the most important day of your life.",
       "price": 2999,
-      "imageUrl": "https://images.unsplash.com/photo-1679599441308-0f9e95330ac5?q=80&w=386&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "imageUrl": "https://images.unsplash.com/photo-1679599441308-0f9e95330ac5?auto=format&fit=crop&w=386&q=80",
       "category": "PACKAGE",
-      "isPopular": true
+      "serviceType": "SALON",
+      "isAvailable": true
     }
   ],
   "homeServices": [
@@ -220,7 +284,7 @@
       "name": "Hair Cut at Home",
       "description": "Professional haircut at your doorstep by an experienced stylist.",
       "price": 199,
-      "imageUrl": "https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=400&q=80",
+      "imageUrl": "https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=400&q=80",
       "category": "HAIR",
       "serviceType": "HOME",
       "isAvailable": true
@@ -230,7 +294,7 @@
       "name": "Beard Trim at Home",
       "description": "Expert beard trimming and styling at your home.",
       "price": 129,
-      "imageUrl": "https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=400&q=80",
+      "imageUrl": "https://images.unsplash.com/photo-1621605815971-fbc98d665033?auto=format&fit=crop&w=400&q=80",
       "category": "BEARD",
       "serviceType": "HOME",
       "isAvailable": true
@@ -240,7 +304,7 @@
       "name": "Facial at Home",
       "description": "Relaxing facial treatment delivered at your doorstep.",
       "price": 799,
-      "imageUrl": "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=400&q=80",
+      "imageUrl": "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=400&q=80",
       "category": "FACIAL",
       "serviceType": "HOME",
       "isAvailable": true
@@ -250,7 +314,7 @@
       "name": "Hair Spa at Home",
       "description": "Nourishing hair spa treatment at the comfort of your home.",
       "price": 599,
-      "imageUrl": "https://images.unsplash.com/photo-1571454870646-86bf1e5b25ae?q=80&w=400",
+      "imageUrl": "https://images.unsplash.com/photo-1571454870646-86bf1e5b25ae?auto=format&fit=crop&w=400&q=80",
       "category": "SPA",
       "serviceType": "HOME",
       "isAvailable": true
@@ -260,7 +324,7 @@
       "name": "Head Massage at Home",
       "description": "Relaxing head and scalp massage at your doorstep.",
       "price": 249,
-      "imageUrl": "https://plus.unsplash.com/premium_photo-1726776133324-540344f791d8?q=80&w=400",
+      "imageUrl": "https://plus.unsplash.com/premium_photo-1726776133324-540344f791d8?auto=format&fit=crop&w=400&q=80",
       "category": "MASSAGE",
       "serviceType": "HOME",
       "isAvailable": true
@@ -270,7 +334,7 @@
       "name": "Kids Haircut at Home",
       "description": "Gentle and comfortable haircut for kids at home.",
       "price": 169,
-      "imageUrl": "https://plus.unsplash.com/premium_photo-1677098576397-d3403bf838a0?q=80&w=400",
+      "imageUrl": "https://plus.unsplash.com/premium_photo-1677098576397-d3403bf838a0?auto=format&fit=crop&w=400&q=80",
       "category": "KIDS",
       "serviceType": "HOME",
       "isAvailable": true
@@ -280,7 +344,7 @@
       "name": "Grooming Package at Home",
       "description": "Complete grooming package including haircut, beard trim and facial at home.",
       "price": 1299,
-      "imageUrl": "https://plus.unsplash.com/premium_photo-1711299478774-39fde03c2daf?q=80&w=400",
+      "imageUrl": "https://plus.unsplash.com/premium_photo-1711299478774-39fde03c2daf?auto=format&fit=crop&w=400&q=80",
       "category": "PACKAGE",
       "serviceType": "HOME",
       "isAvailable": true
@@ -462,7 +526,7 @@
       "validUntil": "Valid till 31 Aug 2026",
       "gradientStartHex": "#C9A84C",
       "gradientEndHex": "#8B6914",
-      "imageUrl": "https://images.unsplash.com/photo-1571454870646-86bf1e5b25ae?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+      "imageUrl": "https://images.unsplash.com/photo-1571454870646-86bf1e5b25ae?auto=format&fit=crop&w=387&q=80"
     },
     {
       "id": 2,
@@ -472,7 +536,7 @@
       "validUntil": "Valid all year",
       "gradientStartHex": "#1E3C72",
       "gradientEndHex": "#2A5298",
-      "imageUrl": "https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=400&q=80"
+      "imageUrl": "https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=400&q=80"
     },
     {
       "id": 3,
@@ -482,7 +546,7 @@
       "validUntil": "Limited time offer",
       "gradientStartHex": "#870000",
       "gradientEndHex": "#190A05",
-      "imageUrl": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80"
+      "imageUrl": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&q=80"
     },
     {
       "id": 4,
@@ -492,7 +556,7 @@
       "validUntil": "Every Saturday & Sunday",
       "gradientStartHex": "#134E5E",
       "gradientEndHex": "#71B280",
-      "imageUrl": "https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=400&q=80"
+      "imageUrl": "https://images.unsplash.com/photo-1621605815971-fbc98d665033?auto=format&fit=crop&w=400&q=80"
     },
     {
       "id": 5,
@@ -502,7 +566,7 @@
       "validUntil": "Valid on weekdays",
       "gradientStartHex": "#373B44",
       "gradientEndHex": "#4286F4",
-      "imageUrl": "https://images.unsplash.com/photo-1599011176306-4a96f1516d4d?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+      "imageUrl": "https://images.unsplash.com/photo-1599011176306-4a96f1516d4d?auto=format&fit=crop&w=387&q=80"
     }
   ],
   "reviews": [
@@ -574,145 +638,145 @@
       "id": 2,
       "name": "Raj Kumar",
       "expertise": "Senior Stylist — Hair & Beard",
-      "imageUrl": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&q=80"
+      "imageUrl": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&q=80"
     },
     {
       "id": 3,
       "name": "Amit Singh",
       "expertise": "Beard & Grooming Specialist",
-      "imageUrl": "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=200&q=80"
+      "imageUrl": "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=200&q=80"
     },
     {
       "id": 4,
       "name": "Sunil Sharma",
       "expertise": "Facial & Skin Care Expert",
-      "imageUrl": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=200&q=80"
+      "imageUrl": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=200&q=80"
     },
     {
       "id": 5,
       "name": "Md Maruph",
       "expertise": "Hair Color & Styling Pro",
-      "imageUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=200&q=80"
+      "imageUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=200&q=80"
     }
   ],
   "galleryItems": [
     {
       "id": 1,
-      "imageUrl": "https://images.unsplash.com/photo-1585747860715-2ba37e788b70?w=400&q=80",
+      "imageUrl": "https://images.unsplash.com/photo-1585747860715-2ba37e788b70?auto=format&fit=crop&w=400&q=80",
       "title": "Salon Interior",
       "aspectRatio": 1.0
     },
     {
       "id": 2,
-      "imageUrl": "https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=400&q=80",
+      "imageUrl": "https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=400&q=80",
       "title": "Hair Cut",
       "aspectRatio": 1.2
     },
     {
       "id": 3,
-      "imageUrl": "https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=400&q=80",
+      "imageUrl": "https://images.unsplash.com/photo-1621605815971-fbc98d665033?auto=format&fit=crop&w=400&q=80",
       "title": "Beard Style",
       "aspectRatio": 0.8
     },
     {
       "id": 4,
-      "imageUrl": "https://images.unsplash.com/photo-1560066984-138daaa4e4e1?w=400&q=80",
+      "imageUrl": "https://images.unsplash.com/photo-1560066984-138daaa4e4e1?auto=format&fit=crop&w=400&q=80",
       "title": "Salon Chair",
       "aspectRatio": 1.0
     },
     {
       "id": 5,
-      "imageUrl": "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=400&q=80",
+      "imageUrl": "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=400&q=80",
       "title": "Hair Spa",
       "aspectRatio": 1.3
     },
     {
       "id": 6,
-      "imageUrl": "https://images.unsplash.com/photo-1562322140-8baeececf3df?w=400&q=80",
+      "imageUrl": "https://images.unsplash.com/photo-1562322140-8baeececf3df?auto=format&fit=crop&w=400&q=80",
       "title": "Hair Color",
       "aspectRatio": 0.9
     },
     {
       "id": 7,
-      "imageUrl": "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=400&q=80",
+      "imageUrl": "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=400&q=80",
       "title": "Facial",
       "aspectRatio": 1.1
     },
     {
       "id": 8,
-      "imageUrl": "https://plus.unsplash.com/premium_photo-1661628776646-e7d151b0d169?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "imageUrl": "https://plus.unsplash.com/premium_photo-1661628776646-e7d151b0d169?auto=format&fit=crop&w=870&q=80",
       "title": "Massage",
       "aspectRatio": 1.0
     },
     {
       "id": 9,
-      "imageUrl": "https://images.unsplash.com/photo-1595407753234-0882f1e77954?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "imageUrl": "https://images.unsplash.com/photo-1595407753234-0882f1e77954?auto=format&fit=crop&w=870&q=80",
       "title": "Groom Style",
       "aspectRatio": 1.2
     },
     {
       "id": 10,
-      "imageUrl": "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400&q=80",
+      "imageUrl": "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=400&q=80",
       "title": "Premium Cut",
       "aspectRatio": 0.8
     },
     {
       "id": 11,
-      "imageUrl": "https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?w=400&q=80",
+      "imageUrl": "https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?auto=format&fit=crop&w=400&q=80",
       "title": "Cleanup",
       "aspectRatio": 1.0
     },
     {
       "id": 12,
-      "imageUrl": "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=400&q=80",
+      "imageUrl": "https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=400&q=80",
       "title": "D-Tan",
       "aspectRatio": 1.1
     },
     {
       "id": 13,
-      "imageUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&q=80",
+      "imageUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=400&q=80",
       "title": "Barber",
       "aspectRatio": 1.0
     },
     {
       "id": 14,
-      "imageUrl": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&q=80",
+      "imageUrl": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=400&q=80",
       "title": "Stylist",
       "aspectRatio": 1.2
     },
     {
       "id": 15,
-      "imageUrl": "https://images.unsplash.com/photo-1723373457096-54329042b2b5?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "imageUrl": "https://images.unsplash.com/photo-1723373457096-54329042b2b5?auto=format&fit=crop&w=774&q=80",
       "title": "Grooming",
       "aspectRatio": 0.9
     },
     {
       "id": 16,
-      "imageUrl": "https://images.unsplash.com/photo-1527799820374-87a38b8f90ee?w=400&q=80",
+      "imageUrl": "https://images.unsplash.com/photo-1527799820374-87a38b8f90ee?auto=format&fit=crop&w=400&q=80",
       "title": "Hair Tools",
       "aspectRatio": 1.0
     },
     {
       "id": 17,
-      "imageUrl": "https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?w=400&q=80",
+      "imageUrl": "https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?auto=format&fit=crop&w=400&q=80",
       "title": "Client",
       "aspectRatio": 1.3
     },
     {
       "id": 18,
-      "imageUrl": "https://images.unsplash.com/photo-1612817288484-6f916006741a?w=400&q=80",
+      "imageUrl": "https://images.unsplash.com/photo-1612817288484-6f916006741a?auto=format&fit=crop&w=400&q=80",
       "title": "Scissors",
       "aspectRatio": 0.8
     },
     {
       "id": 19,
-      "imageUrl": "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=400&q=80",
+      "imageUrl": "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=400&q=80",
       "title": "Spa Area",
       "aspectRatio": 1.1
     },
     {
       "id": 20,
-      "imageUrl": "https://images.unsplash.com/photo-1560066984-138daaa4e4e1?w=400&q=80",
+      "imageUrl": "https://images.unsplash.com/photo-1560066984-138daaa4e4e1?auto=format&fit=crop&w=400&q=80",
       "title": "Reception",
       "aspectRatio": 1.0
     }
@@ -722,7 +786,7 @@
       "id": 1,
       "icon": "star",
       "title": "Experienced Stylists",
-      "description": "10+ years of professional expertise in premium grooming"
+      "description": "20+ years of professional expertise in premium grooming"
     },
     {
       "id": 2,
@@ -891,7 +955,7 @@
     "subtitle": "Start your premium grooming business with OSMO",
     "description": "Join the OSMO Modern Salon family and become a part of one of India's fast-growing premium grooming brands. We provide complete business support including salon setup, interior design, staff training, branding, marketing assistance, software support, and operational guidance.",
     "investment": "₹8 Lakhs - ₹20 Lakhs",
-    "franchiseFee": "₹1,50,000",
+    "franchiseFee": "₹50,000",
     "shopArea": "300 - 800 sq. ft.",
     "preferredLocation": "High street, market area, shopping complex or residential hub",
     "expectedROI": "18 - 24 Months",
@@ -925,6 +989,6 @@
     "email": "franchise@osmomodernsalon.in",
     "whatsApp": "https://wa.me/917979071560",
     "website": "https://m3hcoding.github.io/salon/",
-    "bannerImage": "https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?w=1200&q=80"
+    "bannerImage": "https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?auto=format&fit=crop&w=1200&q=80"
   }
 }
