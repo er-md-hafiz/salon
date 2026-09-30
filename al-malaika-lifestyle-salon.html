@@ -1,690 +1,1858 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Al-Malaika Life Style Salon - Premium Grooming in Hazaribagh</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <style>
-        :root {
-            --primary: #8e44ad;
-            --secondary: #9b59b6;
-            --light: #f5eef8;
-            --dark: #2c3e50;
-            --accent: #e67e22;
-        }
-        
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-        
-        body {
-            background-color: #f9f9f9;
-            color: #333;
-            line-height: 1.6;
-        }
-        
-        header {
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
-            color: white;
-            padding: 1rem 0;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-        
-        .container {
-            width: 90%;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        
-        .header-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        
-        .logo {
-            font-size: 1.8rem;
-            font-weight: 700;
-            display: flex;
-            align-items: center;
-        }
-        
-        .logo i {
-            margin-right: 10px;
-            color: var(--accent);
-        }
-        
-        nav ul {
-            display: flex;
-            list-style: none;
-        }
-        
-        nav ul li {
-            margin-left: 1.5rem;
-        }
-        
-        nav ul li a {
-            color: white;
-            text-decoration: none;
-            font-weight: 500;
-            transition: all 0.3s ease;
-            padding: 0.5rem 0;
-            position: relative;
-        }
-        
-        nav ul li a:hover {
-            color: var(--accent);
-        }
-        
-        nav ul li a::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background-color: var(--accent);
-            transition: width 0.3s ease;
-        }
-        
-        nav ul li a:hover::after {
-            width: 100%;
-        }
-        
-        .hero {
-            background: url('https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
-            height: 80vh;
-            display: flex;
-            align-items: center;
-            position: relative;
-        }
-        
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.5);
-        }
-        
-        .hero-content {
-            position: relative;
-            z-index: 1;
-            color: white;
-            max-width: 600px;
-        }
-        
-        .hero h1 {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-            line-height: 1.2;
-        }
-        
-        .hero p {
-            font-size: 1.2rem;
-            margin-bottom: 2rem;
-        }
-        
-        .btn {
-            display: inline-block;
-            background-color: var(--accent);
-            color: white;
-            padding: 0.8rem 1.8rem;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            border: none;
-            cursor: pointer;
-        }
-        
-        .btn:hover {
-            background-color: #d35400;
-            transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-        }
-        
-        .section {
-            padding: 5rem 0;
-        }
-        
-        .section-title {
-            text-align: center;
-            margin-bottom: 3rem;
-        }
-        
-        .section-title h2 {
-            font-size: 2.5rem;
-            color: var(--dark);
-            position: relative;
-            display: inline-block;
-            padding-bottom: 1rem;
-        }
-        
-        .section-title h2::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 80px;
-            height: 4px;
-            background-color: var(--accent);
-        }
-        
-        .services {
-            background-color: var(--light);
-        }
-        
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-        
-        .service-card {
-            background-color: white;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        
-        .service-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
-        }
-        
-        .service-img {
-            height: 200px;
-            overflow: hidden;
-        }
-        
-        .service-img img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.5s ease;
-        }
-        
-        .service-card:hover .service-img img {
-            transform: scale(1.1);
-        }
-        
-        .service-content {
-            padding: 1.5rem;
-        }
-        
-        .service-content h3 {
-            font-size: 1.5rem;
-            margin-bottom: 0.5rem;
-            color: var(--primary);
-        }
-        
-        .service-content p {
-            color: #666;
-            margin-bottom: 1rem;
-        }
-        
-        .price {
-            font-weight: 700;
-            color: var(--accent);
-            font-size: 1.2rem;
-        }
-        
-        .about {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 3rem;
-            align-items: center;
-        }
-        
-        .about-img img {
-            width: 100%;
-            border-radius: 10px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-        }
-        
-        .about-content h2 {
-            font-size: 2rem;
-            color: var(--dark);
-            margin-bottom: 1.5rem;
-        }
-        
-        .about-content p {
-            margin-bottom: 1rem;
-            color: #555;
-        }
-        
-        .contact {
-            background-color: var(--light);
-        }
-        
-        .contact-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-        
-        .contact-info {
-            background-color: white;
-            padding: 2rem;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-        }
-        
-        .contact-info h3 {
-            font-size: 1.5rem;
-            color: var(--primary);
-            margin-bottom: 1.5rem;
-        }
-        
-        .contact-item {
-            display: flex;
-            align-items: flex-start;
-            margin-bottom: 1.5rem;
-        }
-        
-        .contact-item i {
-            font-size: 1.2rem;
-            color: var(--accent);
-            margin-right: 1rem;
-            margin-top: 0.3rem;
-        }
-        
-        .hours-item {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 0.5rem;
-        }
-        
-        .hours-item span:first-child {
-            font-weight: 600;
-        }
-        
-        .contact-form {
-            background-color: white;
-            padding: 2rem;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-        }
-        
-        .contact-form h3 {
-            font-size: 1.5rem;
-            color: var(--primary);
-            margin-bottom: 1.5rem;
-        }
-        
-        .form-group {
-            margin-bottom: 1.5rem;
-        }
-        
-        .form-group label {
-            display: block;
-            margin-bottom: 0.5rem;
-            font-weight: 600;
-            color: var(--dark);
-        }
-        
-        .form-group input,
-        .form-group textarea {
-            width: 100%;
-            padding: 0.8rem;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            font-size: 1rem;
-        }
-        
-        .form-group textarea {
-            height: 150px;
-            resize: vertical;
-        }
-        
-        footer {
-            background-color: var(--dark);
-            color: white;
-            padding: 3rem 0 1rem;
-        }
-        
-        .footer-content {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-bottom: 2rem;
-        }
-        
-        .footer-column h3 {
-            font-size: 1.3rem;
-            margin-bottom: 1.5rem;
-            position: relative;
-            padding-bottom: 0.5rem;
-        }
-        
-        .footer-column h3::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 50px;
-            height: 2px;
-            background-color: var(--accent);
-        }
-        
-        .footer-column p {
-            margin-bottom: 1rem;
-            color: #bbb;
-        }
-        
-        .social-links {
-            display: flex;
-            gap: 1rem;
-        }
-        
-        .social-links a {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 40px;
-            height: 40px;
-            background-color: rgba(255, 255, 255, 0.1);
-            border-radius: 50%;
-            color: white;
-            transition: all 0.3s ease;
-        }
-        
-        .social-links a:hover {
-            background-color: var(--accent);
-            transform: translateY(-3px);
-        }
-        
-        .quick-links li {
-            margin-bottom: 0.8rem;
-            list-style: none;
-        }
-        
-        .quick-links a {
-            color: #bbb;
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-        
-        .quick-links a:hover {
-            color: var(--accent);
-        }
-        
-        .copyright {
-            text-align: center;
-            padding-top: 2rem;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            color: #bbb;
-            font-size: 0.9rem;
-        }
-        
-        @media (max-width: 768px) {
-            .header-content {
-                flex-direction: column;
-                text-align: center;
-            }
-            
-            nav ul {
-                margin-top: 1rem;
-            }
-            
-            nav ul li {
-                margin: 0 0.5rem;
-            }
-            
-            .hero h1 {
-                font-size: 2.2rem;
-            }
-            
-            .about {
-                grid-template-columns: 1fr;
-            }
-            
-            .about-img {
-                order: -1;
-            }
-        }
-    </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Al-Malaika Life Style Salon | Premium Family Grooming in Hazaribagh</title>
+<meta name="description" content="Premium family grooming in Hazaribagh — haircuts, beard styling, facial, hair spa, massage, kids grooming, home service & franchise. Open daily 8 AM – 10 PM. Call 097081 01242.">
+<meta name="theme-color" content="#0b0b0c">
+<meta property="og:title" content="Al-Malaika Life Style Salon | Experience Premium Grooming">
+<meta property="og:description" content="Hair • Beard • Facial • Spa • Home Service in Hazaribagh, Jharkhand.">
+<meta property="og:image" content="https://images.unsplash.com/photo-1585747860715-2ba37e788b70?auto=format&fit=crop&w=1200&q=70">
+<meta property="og:type" content="website">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"HairSalon","name":"Al-Malaika Life Style Salon","image":"https://images.unsplash.com/photo-1585747860715-2ba37e788b70?auto=format&fit=crop&w=1200&q=70","description":"Premium family grooming services in Hazaribagh.","telephone":"+919708101242","email":"contact@almalaikasalon.in","priceRange":"₹₹","address":{"@type":"PostalAddress","streetAddress":"Alfalah Colony, Pugmil","addressLocality":"Hazaribagh","addressRegion":"Jharkhand","postalCode":"825319","addressCountry":"IN"},"geo":{"@type":"GeoCoordinates","latitude":23.9988,"longitude":85.3612},"areaServed":"Hazaribagh","openingHours":"Mo-Su 08:00-22:00","aggregateRating":{"@type":"AggregateRating","ratingValue":"4.8","reviewCount":"15"},"founder":{"@type":"Person","name":"Md Arif Hussain"},"sameAs":["https://www.instagram.com/almalaikasalon","https://www.facebook.com/almalaikasalon"]}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Manrope:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,300,0,0&display=swap">
+
+<!-- Swiper (hero slider) -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+
+<style>
+/* ============ TOKENS ============ */
+:root{
+  --black:#0b0b0c; --charcoal:#17181b; --card:#1c1d21;
+  --off:#f2ede3; --gold:#b8964a; --gold-lt:#d8bb76; --gold-dk:#8b6914;
+  --grey:#8b8880; --line:rgba(242,237,227,.14);
+  --serif:"Cormorant Garamond",Georgia,serif;
+  --sans:Manrope,system-ui,-apple-system,"Segoe UI",sans-serif;
+  --r:2px;
+  --header-h:72px;
+}
+[data-theme="light"]{
+  --black:#f7f4ee; --charcoal:#efeae0; --card:#ffffff;
+  --off:#141414; --grey:#6b675f; --line:rgba(20,20,20,.14);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:80px;-webkit-text-size-adjust:100%}
+body{
+  margin:0;background:var(--black);color:var(--off);
+  font:400 16px/1.7 var(--sans);overflow-x:hidden;
+  padding-top:env(safe-area-inset-top,0px);
+  transition:background .4s,color .4s;
+}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit}
+h1,h2,h3,h4{font-family:var(--serif);font-weight:400;margin:0;line-height:1}
+::selection{background:var(--gold);color:#0b0b0c}
+
+.w{max-width:1240px;margin-inline:auto;padding-inline:22px}
+section{padding:clamp(64px,11vw,130px) 0;position:relative}
+.alt{background:var(--charcoal)}
+.lb{display:block;font-size:.7rem;letter-spacing:.34em;text-transform:uppercase;color:var(--gold);margin-bottom:20px}
+.big{font-size:clamp(2.7rem,8.5vw,6.6rem);letter-spacing:-.01em}
+.mid{font-size:clamp(2.1rem,5.5vw,4.2rem)}
+.sm-h{font-size:clamp(1.5rem,3vw,2.2rem)}
+p.t{color:var(--grey);max-width:560px;margin:20px 0 0}
+.center{text-align:center}
+.center p.t{margin-inline:auto}
+
+/* ============ BUTTONS ============ */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:8px;
+  min-height:50px;padding:0 28px;border:1px solid var(--off);
+  background:none;color:var(--off);cursor:pointer;border-radius:var(--r);
+  font:600 .72rem/1 var(--sans);letter-spacing:.2em;text-transform:uppercase;
+  transition:background .3s,color .3s,border-color .3s,letter-spacing .3s;
+}
+.btn:hover{background:var(--off);color:var(--black);letter-spacing:.26em}
+.btn.g{background:var(--gold);border-color:var(--gold);color:#0b0b0c}
+.btn.g:hover{background:var(--gold-lt);border-color:var(--gold-lt);color:#0b0b0c}
+.btn.sm{min-height:40px;padding:0 18px;font-size:.66rem}
+.row{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
+.center .row{justify-content:center}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+
+/* ============ HEADER ============ */
+header{
+  position:fixed;inset:0 0 auto;z-index:50;
+  padding-top:env(safe-area-inset-top,0px);
+  transition:background .4s,backdrop-filter .4s,border-color .4s;
+  border-bottom:1px solid transparent;
+}
+header.s{background:color-mix(in srgb,var(--black) 78%,transparent);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom-color:var(--line)}
+header .w{display:flex;align-items:center;justify-content:space-between;height:var(--header-h);gap:16px}
+.logo{font-family:var(--serif);font-size:1.55rem;letter-spacing:.32em;line-height:1}
+.logo small{display:block;font-family:var(--sans);font-size:.5rem;letter-spacing:.4em;color:var(--grey);margin-top:4px}
+nav.d{display:none;gap:22px;font-size:.68rem;letter-spacing:.18em;text-transform:uppercase}
+nav.d a{position:relative;padding:4px 0;color:var(--off);opacity:.85;transition:opacity .3s,color .3s}
+nav.d a::after{content:"";position:absolute;left:0;bottom:0;height:1px;width:0;background:var(--gold);transition:width .35s}
+nav.d a:hover{opacity:1;color:var(--gold)}
+nav.d a:hover::after{width:100%}
+.hact{display:flex;align-items:center;gap:10px}
+.iconbtn{
+  width:44px;height:44px;display:grid;place-items:center;border:1px solid var(--line);
+  background:none;border-radius:var(--r);cursor:pointer;color:var(--off);transition:border-color .3s,color .3s;
+}
+.iconbtn:hover{border-color:var(--gold);color:var(--gold)}
+.mb{background:none;border:0;cursor:pointer;font:600 .68rem var(--sans);letter-spacing:.24em;min-height:44px;padding:0 4px}
+@media(max-width:799px){.hact .btn{display:none}}
+
+/* full screen menu */
+#menu{
+  position:fixed;inset:0;z-index:60;background:var(--black);
+  display:flex;flex-direction:column;justify-content:center;gap:2px;padding:80px 30px 40px;
+  clip-path:circle(0% at 100% 0);visibility:hidden;
+  transition:clip-path .7s cubic-bezier(.7,0,.2,1),visibility .7s;
+  overflow-y:auto;
+}
+#menu.o{clip-path:circle(150% at 100% 0);visibility:visible}
+#menu a{font-family:var(--serif);font-size:clamp(2rem,8vw,3.2rem);line-height:1.3;letter-spacing:.04em;transition:color .3s,transform .3s}
+#menu a:hover{color:var(--gold);transform:translateX(10px)}
+#menu .mclose{position:absolute;top:calc(18px + env(safe-area-inset-top,0px));right:22px}
+#menu .msoc{display:flex;gap:18px;margin-top:34px;font-size:.68rem;letter-spacing:.24em;text-transform:uppercase;color:var(--grey)}
+#menu .msoc a{font-family:var(--sans);font-size:.68rem;letter-spacing:.24em}
+#menu .msoc a:hover{transform:none}
+
+/* =========================================================
+   HERO SLIDER
+   ========================================================= */
+.hero-slider{
+  position:relative;
+  height:100svh;
+  min-height:600px;
+  overflow:hidden;
+  isolation:isolate;
+  background:var(--black);
+  padding:0;
+}
+.heroSwiper{
+  width:100%;height:100%;
+  --swiper-navigation-size:16px;
+  --swiper-theme-color:var(--gold);
+  --swiper-pagination-color:var(--gold);
+}
+.heroSwiper .swiper-wrapper{display:flex;height:100%}
+.heroSwiper .swiper-slide{flex:0 0 100%;width:100%;height:100%}
+.heroSwiper:not(.swiper-initialized) .swiper-slide:not(:first-child){display:none}
+.heroSwiper:not(.swiper-initialized) .swiper-pagination,
+.heroSwiper:not(.swiper-initialized) .swiper-button-prev,
+.heroSwiper:not(.swiper-initialized) .swiper-button-next{display:none}
+
+.heroSwiper .swiper-slide{
+  position:relative;
+  display:flex;
+  align-items:flex-end;
+  overflow:hidden;
+  background:var(--black);
+}
+.slide-bg{position:absolute;inset:0;z-index:0;overflow:hidden}
+.slide-bg img{width:100%;height:100%;object-fit:cover;object-position:center;transform-origin:center}
+[data-theme="light"] .slide-bg img{opacity:.3}
+.slide-overlay{
+  position:absolute;inset:0;z-index:1;
+  background:linear-gradient(180deg,
+    color-mix(in srgb,var(--black) 76%,transparent) 0%,
+    color-mix(in srgb,var(--black) 50%,transparent) 38%,
+    var(--black) 100%);
+}
+.slide-content{
+  position:relative;z-index:2;
+  width:100%;max-width:1240px;margin-inline:auto;
+  padding:calc(var(--header-h) + 48px) 22px clamp(96px,14vh,132px);
+}
+.badge-gold{
+  display:inline-block;
+  font-size:.64rem;letter-spacing:.32em;text-transform:uppercase;
+  color:var(--gold);
+  border:1px solid color-mix(in srgb,var(--gold) 50%,transparent);
+  padding:7px 15px;border-radius:100px;margin-bottom:22px;
+}
+.slide-content h1{
+  font-family:var(--serif);font-weight:400;
+  font-size:clamp(2.3rem,7.4vw,5.4rem);
+  line-height:1.03;letter-spacing:-.01em;
+  max-width:17ch;
+}
+.slide-content h1 .highlight{color:var(--gold);font-style:italic}
+.slide-content p{
+  color:var(--grey);
+  margin:20px 0 0;
+  font-size:clamp(.88rem,1.5vw,1.05rem);
+  max-width:54ch;
+}
+.hero-strip{
+  display:flex;flex-wrap:wrap;gap:8px 24px;margin-top:22px;
+  font-size:.66rem;letter-spacing:.2em;text-transform:uppercase;color:var(--grey);
+}
+.hero-strip b{color:var(--gold);font-weight:600}
+.btn-group-hero{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
+
+.swiper-slide-active .slide-content > *{
+  animation:hsUp .9s cubic-bezier(.2,.8,.2,1) both;
+}
+.swiper-slide-active .slide-content > *:nth-child(1){animation-delay:.18s}
+.swiper-slide-active .slide-content > *:nth-child(2){animation-delay:.28s}
+.swiper-slide-active .slide-content > *:nth-child(3){animation-delay:.38s}
+.swiper-slide-active .slide-content > *:nth-child(4){animation-delay:.48s}
+.swiper-slide-active .slide-content > *:nth-child(5){animation-delay:.58s}
+@keyframes hsUp{from{opacity:0;transform:translateY(26px)}}
+
+.swiper-slide-active .slide-bg img{animation:kb 12s ease-out both}
+@keyframes kb{from{transform:scale(1)}to{transform:scale(1.09)}}
+
+.heroSwiper .swiper-pagination{
+  bottom:calc(74px + env(safe-area-inset-bottom,0px));
+}
+.heroSwiper .swiper-pagination-bullet{
+  width:26px;height:2px;border-radius:0;
+  background:color-mix(in srgb,var(--off) 40%,transparent);
+  opacity:1;margin:0 5px !important;transition:width .35s,background .35s;
+}
+.heroSwiper .swiper-pagination-bullet-active{background:var(--gold);width:46px}
+.heroSwiper .swiper-button-prev,
+.heroSwiper .swiper-button-next{
+  width:48px;height:48px;border-radius:50%;margin-top:0;
+  border:1px solid color-mix(in srgb,var(--off) 26%,transparent);
+  background:color-mix(in srgb,var(--black) 38%,transparent);
+  backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);
+  color:var(--off);
+  transition:border-color .3s,color .3s,background .3s;
+}
+.heroSwiper .swiper-button-prev:hover,
+.heroSwiper .swiper-button-next:hover{
+  border-color:var(--gold);color:var(--gold);
+  background:color-mix(in srgb,var(--black) 62%,transparent);
+}
+.heroSwiper .swiper-button-prev{left:20px}
+.heroSwiper .swiper-button-next{right:20px}
+@media(max-width:799px){
+  .heroSwiper .swiper-button-prev,
+  .heroSwiper .swiper-button-next{display:none}
+}
+@media(min-width:800px){
+  .heroSwiper .swiper-pagination{bottom:34px}
+  .slide-content{padding-bottom:clamp(88px,12vh,120px)}
+}
+
+/* ============ MARQUEE ============ */
+.marq{overflow:hidden;border-block:1px solid var(--line);padding:20px 0;background:var(--charcoal)}
+.marq-in{display:flex;gap:50px;width:max-content;animation:slide 34s linear infinite}
+.marq span{font-family:var(--serif);font-size:clamp(1.3rem,3vw,2.1rem);color:var(--grey);white-space:nowrap;display:flex;align-items:center;gap:50px}
+.marq span::after{content:"✦";color:var(--gold);font-size:.7em}
+@keyframes slide{to{transform:translateX(-50%)}}
+
+/* ============ REVEAL ============ */
+.rv{opacity:0;transform:translateY(34px);transition:opacity .9s ease,transform .9s cubic-bezier(.2,.8,.2,1)}
+.rv.in{opacity:1;transform:none}
+
+/* ============ CARDS ============ */
+.grid{display:grid;gap:18px;margin-top:46px}
+.ph{position:relative;overflow:hidden;background:#1a1a1d;border-radius:var(--r)}
+.ph img{width:100%;height:100%;object-fit:cover;transition:transform .9s cubic-bezier(.2,.8,.2,1)}
+.ph::after{content:"";position:absolute;inset:0;background:linear-gradient(transparent 55%,rgba(0,0,0,.6))}
+.ph.plain::after{display:none}
+
+.cats{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;padding:0 22px 16px;margin-top:44px;scrollbar-width:thin}
+.cats::-webkit-scrollbar{height:4px}
+.cats::-webkit-scrollbar-thumb{background:var(--line)}
+.cat{flex:0 0 78%;scroll-snap-align:start;position:relative;border-radius:var(--r);overflow:hidden;display:block}
+.cat .ph{aspect-ratio:4/5}
+.cat:hover .ph img{transform:scale(1.06)}
+.cat-t{position:absolute;left:0;right:0;bottom:0;padding:22px;z-index:2}
+.cat-t small{font-size:.6rem;letter-spacing:.28em;color:var(--gold-lt);text-transform:uppercase}
+.cat-t h3{font-size:1.75rem;margin:6px 0 4px}
+.cat-t p{color:#cfcabf;font-size:.82rem;margin:0}
+@media(min-width:700px){.cats{padding-inline:0;margin-inline:auto;max-width:1240px}.cat{flex-basis:32%}}
+@media(min-width:1100px){.cat{flex-basis:23.5%}}
+
+.scard{border:1px solid var(--line);border-radius:var(--r);overflow:hidden;background:var(--card);display:flex;flex-direction:column;transition:border-color .4s,transform .4s}
+.scard:hover{border-color:color-mix(in srgb,var(--gold) 60%,transparent);transform:translateY(-4px)}
+.scard .ph{aspect-ratio:4/3;border-radius:0}
+.scard:hover .ph img{transform:scale(1.05)}
+.scard-b{padding:20px;display:flex;flex-direction:column;flex:1;gap:8px}
+.scard-b h3{font-size:1.45rem}
+.scard-b p{color:var(--grey);font-size:.85rem;margin:0;flex:1}
+.price{font-family:var(--serif);font-size:1.5rem;color:var(--gold)}
+.tagpill{display:inline-block;font-size:.58rem;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);border:1px solid color-mix(in srgb,var(--gold) 45%,transparent);padding:4px 9px;border-radius:100px;width:max-content}
+
+.offers{display:grid;gap:16px;margin-top:44px}
+.offer{border-radius:var(--r);padding:28px;position:relative;overflow:hidden;color:#f2ede3;min-height:210px;display:flex;flex-direction:column;justify-content:flex-end;isolation:isolate}
+.offer img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2;opacity:.32}
+.offer::before{content:"";position:absolute;inset:0;z-index:-1}
+.offer .disc{font-family:var(--serif);font-size:clamp(2.2rem,6vw,3.4rem);line-height:1}
+.offer h3{font-size:1.5rem;margin:6px 0 4px}
+.offer p{font-size:.85rem;color:rgba(242,237,227,.8);margin:0}
+.offer small{font-size:.6rem;letter-spacing:.24em;text-transform:uppercase;color:rgba(242,237,227,.72);margin-top:12px;display:block}
+
+.plwrap{display:grid;gap:0 64px;margin-top:40px}
+.plg{margin-bottom:34px;break-inside:avoid}
+.plg h3{font-size:1.9rem;color:var(--gold);margin-bottom:8px}
+.pr{display:flex;justify-content:space-between;align-items:flex-start;gap:18px;padding:13px 0;border-bottom:1px solid var(--line);transition:color .3s,padding-left .3s}
+.pr:hover{color:var(--gold);padding-left:6px}
+.pr span{font-size:.98rem}
+.pr small{display:block;color:var(--grey);font-size:.78rem;margin-top:2px}
+.pr b{font-weight:600;white-space:nowrap;font-size:1rem}
+
+.team{display:grid;gap:18px;margin-top:44px;grid-template-columns:repeat(2,1fr)}
+.member{text-align:center}
+.member .ph{aspect-ratio:3/4;border-radius:var(--r)}
+.member:hover .ph img{transform:scale(1.05)}
+.member h3{font-size:1.25rem;margin-top:14px}
+.member p{color:var(--grey);font-size:.76rem;margin:4px 0 0;letter-spacing:.06em}
+.member .ava{aspect-ratio:3/4;display:grid;place-items:center;background:linear-gradient(160deg,#2b2721,#121214);font-family:var(--serif);font-size:2rem;color:var(--gold)}
+
+.gl{columns:2;column-gap:10px;margin-top:44px}
+.gl button{display:block;width:100%;margin:0 0 10px;padding:0;border:0;background:none;cursor:zoom-in;break-inside:avoid;border-radius:var(--r);overflow:hidden;position:relative}
+.gl .ph::after{background:linear-gradient(transparent 60%,rgba(0,0,0,.55))}
+.gl button:hover .ph img{transform:scale(1.06)}
+.gl .cap{position:absolute;left:12px;bottom:10px;z-index:2;font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:#f2ede3}
+@media(min-width:760px){.gl{columns:3}}
+@media(min-width:1100px){.gl{columns:4}}
+
+.rhead{display:flex;flex-wrap:wrap;align-items:center;gap:26px;margin-top:30px;padding:24px;border:1px solid var(--line);border-radius:var(--r)}
+.rscore{font-family:var(--serif);font-size:3.4rem;line-height:1;color:var(--gold)}
+.stars{display:flex;gap:3px;color:var(--gold);font-size:1.05rem;letter-spacing:2px}
+.rgrid{display:grid;gap:16px;margin-top:26px}
+.rev{border:1px solid var(--line);border-radius:var(--r);padding:24px;background:var(--card)}
+.rev-h{display:flex;align-items:center;gap:14px;margin-bottom:14px}
+.init{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(145deg,var(--gold),var(--gold-dk));color:#0b0b0c;font-weight:700;font-size:.85rem;letter-spacing:.05em;flex:none}
+.rev-h h4{margin:0;font-family:var(--sans);font-size:.92rem;font-weight:600}
+.rev-h small{color:var(--grey);font-size:.72rem}
+.rev p{color:var(--grey);font-size:.9rem;margin:0}
+
+.hv{display:grid;max-width:760px;margin:38px auto 0;text-align:left;border-top:1px solid var(--line)}
+.hv a{display:flex;justify-content:space-between;gap:16px;padding:15px 0;border-bottom:1px solid var(--line);transition:color .3s,padding-left .3s}
+.hv a:hover{color:var(--gold);padding-left:6px}
+.hv small{display:block;color:var(--grey);font-size:.78rem;margin-top:2px}
+.hv b{white-space:nowrap;font-weight:600}
+.hnote{margin-top:26px;font-size:.8rem;color:var(--grey);line-height:2}
+.hnote b{color:var(--off);font-weight:600}
+.slots{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:22px}
+.slot{font-size:.72rem;padding:7px 13px;border:1px solid var(--line);border-radius:100px;color:var(--grey)}
+.slot.on{color:var(--gold);border-color:color-mix(in srgb,var(--gold) 50%,transparent)}
+.slot.off{opacity:.35;text-decoration:line-through}
+
+.fr{display:grid;gap:34px;margin-top:44px}
+.fr-banner{border-radius:var(--r);overflow:hidden;position:relative;aspect-ratio:16/10}
+.fr-banner img{width:100%;height:100%;object-fit:cover}
+.fr-banner::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 40%,rgba(11,11,12,.85))}
+.fr-facts{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;margin-top:26px}
+.fr-facts div{background:var(--black);padding:18px}
+.fr-facts small{display:block;font-size:.6rem;letter-spacing:.22em;text-transform:uppercase;color:var(--grey)}
+.fr-facts b{font-family:var(--serif);font-size:1.2rem;color:var(--gold);font-weight:500}
+.fr-lists{display:grid;gap:28px}
+.fr-lists ul{list-style:none;padding:0;margin:14px 0 0;display:grid;gap:9px}
+.fr-lists li{position:relative;padding-left:24px;color:var(--grey);font-size:.9rem}
+.fr-lists li::before{content:"✦";position:absolute;left:0;color:var(--gold);font-size:.8rem}
+.fr-lists h3{font-size:1.5rem}
+
+.locgrid{display:grid;gap:44px;align-items:start}
+.hours{display:inline-flex;align-items:center;gap:9px;font-size:.74rem;letter-spacing:.2em;text-transform:uppercase;margin:24px 0 6px}
+.dot{width:8px;height:8px;border-radius:50%;background:#c0453b;flex:none;box-shadow:0 0 0 0 rgba(192,69,59,.6)}
+.dot.on{background:#4bb87a;animation:pulse 2s infinite}
+@keyframes pulse{70%{box-shadow:0 0 0 8px rgba(75,184,122,0)}100%{box-shadow:0 0 0 0 rgba(75,184,122,0)}}
+dl.info{display:grid;gap:6px;margin:22px 0 0;color:var(--grey);font-size:.92rem}
+dl.info b{color:var(--off);font-weight:600;font-family:var(--sans)}
+dl.info a:hover{color:var(--gold)}
+iframe.map{width:100%;height:300px;border:1px solid var(--line);border-radius:var(--r);margin-top:26px;filter:grayscale(.35) contrast(1.05)}
+[data-theme="light"] iframe.map{filter:none}
+
+.cta{background:radial-gradient(circle at 50% 120%,color-mix(in srgb,var(--gold) 22%,transparent),transparent 62%),var(--black);text-align:center}
+
+footer{border-top:1px solid var(--line);padding:64px 0 110px;color:var(--grey);font-size:.88rem}
+.fgrid{display:grid;gap:34px}
+footer h4{color:var(--off);font-size:.66rem;letter-spacing:.28em;margin:0 0 12px;font-weight:700;font-family:var(--sans)}
+footer a{display:block;padding:3px 0;transition:color .3s}
+footer a:hover{color:var(--gold)}
+.fbot{margin-top:44px;padding-top:22px;border-top:1px solid var(--line);display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between;font-size:.76rem}
+@media(min-width:860px){.fgrid{grid-template-columns:2fr 1fr 1fr 1fr}}
+@media(min-width:800px){footer{padding-bottom:64px}}
+
+.bar{
+  position:fixed;left:0;right:0;bottom:0;z-index:40;
+  display:grid;grid-template-columns:repeat(4,1fr);
+  background:color-mix(in srgb,var(--black) 92%,transparent);
+  backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+  border-top:1px solid var(--line);padding-bottom:env(safe-area-inset-bottom,0px);
+}
+.bar a,.bar button{min-height:56px;display:grid;place-items:center;gap:3px;background:none;border:0;cursor:pointer;font:600 .58rem var(--sans);letter-spacing:.16em;color:var(--off)}
+.bar .material-symbols-outlined{font-size:19px}
+.bar .k{background:var(--gold);color:#0b0b0c}
+@media(min-width:800px){.bar{display:none}}
+
+#lbx{position:fixed;inset:0;z-index:70;background:rgba(0,0,0,.95);display:none;place-items:center;padding:20px}
+#lbx.o{display:grid}
+#lbx img{max-width:min(92vw,900px);max-height:82vh;object-fit:contain;border-radius:var(--r)}
+#lbx .cap{color:#cfcabf;font-size:.75rem;letter-spacing:.22em;text-transform:uppercase;margin-top:14px;text-align:center}
+#lbx .x{position:absolute;top:calc(16px + env(safe-area-inset-top,0px));right:20px}
+#lbx .nav{position:absolute;top:50%;transform:translateY(-50%);width:48px;height:48px;display:grid;place-items:center;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);border-radius:50%;cursor:pointer;color:#fff}
+#lbx .nav.p{left:14px}#lbx .nav.n{right:14px}
+
+#bk{
+  position:fixed;inset:0;z-index:80;background:var(--black);overflow-y:auto;
+  padding:calc(26px + env(safe-area-inset-top,0px)) 22px calc(40px + env(safe-area-inset-bottom,0px));
+  transform:translateY(100%);visibility:hidden;
+  transition:transform .65s cubic-bezier(.7,0,.2,1),visibility .65s;
+}
+#bk.o{transform:none;visibility:visible}
+#bk .in{max-width:600px;margin-inline:auto}
+.bk-top{display:flex;justify-content:space-between;align-items:center;gap:16px}
+.prog{font-size:.66rem;letter-spacing:.3em;color:var(--gold)}
+.pbar{height:2px;background:var(--line);margin:14px 0 6px;overflow:hidden;border-radius:2px}
+.pbar i{display:block;height:100%;background:var(--gold);width:0;transition:width .5s cubic-bezier(.2,.8,.2,1)}
+.stp{display:none}
+.stp.on{display:block;animation:fd .45s ease}
+@keyframes fd{from{opacity:0;transform:translateY(12px)}}
+label{display:block;font-size:.66rem;letter-spacing:.2em;text-transform:uppercase;color:var(--grey);margin:18px 0 7px}
+input,select,textarea{
+  width:100%;min-height:52px;padding:13px 15px;background:var(--charcoal);
+  border:1px solid var(--line);color:var(--off);font:inherit;border-radius:var(--r);
+  transition:border-color .3s;
+}
+input:focus,select:focus,textarea:focus{border-color:var(--gold);outline:none}
+textarea{resize:vertical;min-height:80px}
+.chips{display:flex;flex-wrap:wrap;gap:9px;margin-top:12px}
+.chip{padding:10px 15px;border:1px solid var(--line);border-radius:100px;background:none;cursor:pointer;font-size:.78rem;color:var(--grey);transition:.3s}
+.chip:hover{border-color:var(--gold);color:var(--gold)}
+.chip.sel{background:var(--gold);border-color:var(--gold);color:#0b0b0c;font-weight:600}
+.sum{border:1px solid var(--line);padding:20px;margin-top:22px;border-radius:var(--r);color:var(--grey);font-size:.88rem;line-height:2}
+.sum b{color:var(--off);font-weight:600}
+.err{color:#e0867d;font-size:.84rem;min-height:1.5em;margin-top:12px}
+.bk-nav{display:flex;gap:12px;margin-top:8px}
+.bk-nav .btn{flex:1}
+
+#toast{position:fixed;left:50%;bottom:96px;transform:translate(-50%,20px);background:var(--off);color:var(--black);padding:12px 22px;border-radius:100px;font-size:.8rem;font-weight:600;opacity:0;pointer-events:none;transition:.4s;z-index:90}
+#toast.o{opacity:1;transform:translate(-50%,0)}
+
+@media(min-width:700px){
+  .grid.g2{grid-template-columns:repeat(2,1fr)}
+  .grid.g3{grid-template-columns:repeat(3,1fr)}
+  .offers{grid-template-columns:repeat(2,1fr)}
+  .rgrid{grid-template-columns:repeat(2,1fr)}
+  .team{grid-template-columns:repeat(3,1fr)}
+  .fr-facts{grid-template-columns:repeat(4,1fr)}
+}
+@media(min-width:800px){
+  nav.d{display:flex}
+  .mb.m{display:none}
+  .plwrap{grid-template-columns:1fr 1fr}
+  .locgrid{grid-template-columns:1fr 1fr;gap:80px}
+  .fr{grid-template-columns:1fr 1fr;align-items:start}
+  .fr-lists{grid-template-columns:1fr 1fr;gap:40px}
+  .hact .btn{display:inline-flex}
+}
+@media(min-width:1000px){
+  .grid.g3{grid-template-columns:repeat(3,1fr)}
+  .grid.g4{grid-template-columns:repeat(4,1fr)}
+  .offers{grid-template-columns:repeat(3,1fr)}
+  .rgrid{grid-template-columns:repeat(3,1fr)}
+  .team{grid-template-columns:repeat(5,1fr)}
+}
+
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+  .rv{opacity:1;transform:none}
+  .slide-content > *{opacity:1!important;transform:none!important}
+  .slide-bg img{transform:none!important}
+}
+
+/* =========================================================
+   VIDEO SHORTS SECTION
+   ========================================================= */
+.videos{display:grid;gap:16px;margin-top:44px}
+.vcard{
+  position:relative;
+  border:1px solid var(--line);
+  border-radius:var(--r);
+  overflow:hidden;
+  background:var(--card);
+  transition:border-color .4s,transform .4s;
+}
+.vcard:hover{border-color:color-mix(in srgb,var(--gold) 60%,transparent);transform:translateY(-4px)}
+.vcard .frame{
+  position:relative;
+  width:100%;
+  aspect-ratio:9/16;
+  background:#000;
+}
+.vcard iframe{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  border:0;
+  display:block;
+}
+.vcard .vmeta{
+  padding:16px 18px;
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+.vcard .vmeta .material-symbols-outlined{
+  font-size:18px;
+  color:var(--gold);
+  flex:none;
+}
+.vcard .vmeta p{
+  margin:0;
+  font-size:.82rem;
+  color:var(--grey);
+  letter-spacing:.04em;
+}
+@media(min-width:640px){.videos{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:1000px){.videos{grid-template-columns:repeat(4,1fr)}}
+</style>
 </head>
 <body>
-    <header>
-        <div class="container">
-            <div class="header-content">
-                <div class="logo">
-                    <i class="fas fa-cut"></i>
-                    <span>Al-Malaika Life Style Salon</span>
-                </div>
-                <nav>
-                    <ul>
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#services">Services</a></li>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
-                </nav>
-            </div>
-        </div>
-    </header>
 
-    <section class="hero" id="home">
-        <div class="container">
-            <div class="hero-content">
-                <h1>Premium Grooming for the Whole Family</h1>
-                <p>Experience luxury hair care and styling services in Hazaribagh. Our expert stylists provide top-notch services for men, women, and children.</p>
-                <a href="#contact" class="btn">Book an Appointment</a>
-            </div>
-        </div>
-    </section>
+<!-- ============ HEADER ============ -->
+<header id="hd">
+  <div class="w">
+    <a class="logo" href="#top">AL-MALAIKA<small>LIFE STYLE SALON</small></a>
+    <nav class="d" aria-label="Main navigation">
+      <a href="#services">Services</a>
+      <a href="#prices">Prices</a>
+      <a href="#offers">Offers</a>
+      <a href="#team">Team</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#home">Home Service</a>
+      <a href="#franchise">Franchise</a>
+      <a href="#loc">Visit</a>
+    </nav>
+    <div class="hact">
+      <button class="iconbtn" id="themeBtn" aria-label="Toggle dark mode"><span class="material-symbols-outlined">dark_mode</span></button>
+      <button class="btn g sm" data-book>Book Now</button>
+      <button class="mb m" id="mo" aria-label="Open menu" aria-expanded="false">MENU</button>
+    </div>
+  </div>
+</header>
 
-    <section class="section services" id="services">
-        <div class="container">
-            <div class="section-title">
-                <h2>Our Services</h2>
-            </div>
-            <div class="services-grid">
-                <!-- Men's Services -->
-                <div class="service-card">
-                    <div class="service-img">
-                        <img src="https://images.unsplash.com/photo-1595475884562-073c30d45670?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Men's Haircut">
-                    </div>
-                    <div class="service-content">
-                        <h3>The Gentleman's Cut</h3>
-                        <p>Premium haircut with precision styling for the modern gentleman.</p>
-                        <p class="price">₹300-₹500</p>
-                    </div>
-                </div>
-                
-                <div class="service-card">
-                    <div class="service-img">
-                        <img src="https://images.unsplash.com/photo-1600334129128-685c5582fd35?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Beard Grooming">
-                    </div>
-                    <div class="service-content">
-                        <h3>Beard & Blade</h3>
-                        <p>Expert beard trimming and shaping with straight razor detailing.</p>
-                        <p class="price">₹250-₹400</p>
-                    </div>
-                </div>
-                
-                <div class="service-card">
-                    <div class="service-img">
-                        <img src="https://images.unsplash.com/photo-1605497788044-5a32c7078486?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Hair Spa">
-                    </div>
-                    <div class="service-content">
-                        <h3>Hair Spa for Him</h3>
-                        <p>Revitalizing treatment to restore moisture and shine to your hair.</p>
-                        <p class="price">₹600-₹800</p>
-                    </div>
-                </div>
-                
-                <!-- Kids Services -->
-                <div class="service-card">
-                    <div class="service-img">
-                        <img src="https://images.unsplash.com/photo-1605497788044-5a32c7078486?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Kids Haircut">
-                    </div>
-                    <div class="service-content">
-                        <h3>Lil' Champs Cut</h3>
-                        <p>Fun and stylish haircuts for your little ones in a comfortable environment.</p>
-                        <p class="price">₹200-₹350</p>
-                    </div>
-                </div>
-                
-                <div class="service-card">
-                    <div class="service-img">
-                        <img src="https://images.unsplash.com/photo-1605497788044-5a32c7078486?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Kids Styling">
-                    </div>
-                    <div class="service-content">
-                        <h3>Junior Rockstars</h3>
-                        <p>Trendy styles for school-aged children who want to stand out.</p>
-                        <p class="price">₹250-₹400</p>
-                    </div>
-                </div>
-                
-                <!-- Baby Services -->
-                <div class="service-card">
-                    <div class="service-img">
-                        <img src="https://images.unsplash.com/photo-1605497788044-5a32c7078486?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Baby's First Haircut">
-                    </div>
-                    <div class="service-content">
-                        <h3>First Haircut Magic</h3>
-                        <p>Special gentle service for baby's first haircut with keepsake certificate.</p>
-                        <p class="price">₹150-₹250</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+<!-- ============ FULLSCREEN MENU ============ -->
+<div id="menu" aria-hidden="true">
+  <button class="mb mclose" id="mx" aria-label="Close menu">CLOSE</button>
+  <a href="#top">Home</a>
+  <a href="#services">Services</a>
+  <a href="#prices">Price List</a>
+  <a href="#offers">Offers</a>
+  <a href="#team">Our Team</a>
+  <a href="#gallery">Gallery</a>
+  <a href="#videos">Videos</a>
+  <a href="#home">Home Service</a>
+  <a href="#franchise">Franchise</a>
+  <a href="#loc">Visit Us</a>
+  <a href="#" data-book style="color:var(--gold)">Book Now</a>
+  <div class="msoc">
+    <a data-wa target="_blank" rel="noopener">WhatsApp</a>
+    <a href="#" data-ig target="_blank" rel="noopener">Instagram</a>
+    <a href="#" data-fb target="_blank" rel="noopener">Facebook</a>
+  </div>
+</div>
 
-    <section class="section about" id="about">
-        <div class="container">
-            <div class="about-content">
-                <h2>About Al-Malaika Life Style Salon</h2>
-                <p>Welcome to Al-Malaika Life Style Salon, Hazaribagh's premier grooming destination for the whole family. Founded by Md Arif Hussain, our salon combines traditional techniques with modern styling to deliver exceptional results.</p>
-                <p>Our team of skilled professionals is dedicated to providing you with a relaxing experience and personalized service that enhances your natural beauty. We use only the highest quality products to ensure your hair and skin receive the best care possible.</p>
-                <p>Whether you're looking for a quick trim, a complete style transformation, or a special treatment for your little one, we have the expertise to meet all your grooming needs.</p>
-            </div>
-            <div class="about-img">
-                <img src="https://images.unsplash.com/photo-1580618672591-eb180b1a973f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Salon Interior">
-            </div>
-        </div>
-    </section>
+<main id="top">
 
-    <section class="section contact" id="contact">
-        <div class="container">
-            <div class="section-title">
-                <h2>Contact Us</h2>
-            </div>
-            <div class="contact-grid">
-                <div class="contact-info">
-                    <h3>Get In Touch</h3>
-                    <div class="contact-item">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <div>
-                            <h4>Address</h4>
-                            <p>Alfalah Colony, Pugmil, Hazaribagh, Jharkhand 825301</p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-phone-alt"></i>
-                        <div>
-                            <h4>Phone</h4>
-                            <p>+91 97081 01242</p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-user"></i>
-                        <div>
-                            <h4>Owner</h4>
-                            <p>Md Arif Hussain</p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-clock"></i>
-                        <div>
-                            <h4>Opening Hours</h4>
-                            <div class="hours-item">
-                                <span>Monday - Sunday</span>
-                                <span>8:00 AM – 10:00 PM</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="contact-form">
-                    <h3>Book an Appointment</h3>
-                    <form>
-                        <div class="form-group">
-                            <label for="name">Your Name</label>
-                            <input type="text" id="name" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="phone">Phone Number</label>
-                            <input type="tel" id="phone" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="service">Service Required</label>
-                            <input type="text" id="service" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="date">Preferred Date</label>
-                            <input type="date" id="date" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Special Requests</label>
-                            <textarea id="message"></textarea>
-                        </div>
-                        <button type="submit" class="btn">Submit Booking</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
+  <!-- =========================================================
+       HERO SLIDER
+       ========================================================= -->
+  <section id="hero" class="hero-slider" aria-label="Hero banner" aria-roledescription="carousel">
+    <div class="swiper heroSwiper">
+      <div class="swiper-wrapper">
 
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-column">
-                    <h3>Al-Malaika Salon</h3>
-                    <p>Your premier destination for quality grooming services in Hazaribagh. We cater to men, women, and children with professional care and attention to detail.</p>
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-whatsapp"></i></a>
-                    </div>
-                </div>
-                <div class="footer-column">
-                    <h3>Quick Links</h3>
-                    <ul class="quick-links">
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#services">Services</a></li>
-                        <li><a href="#about">About Us</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-column">
-                    <h3>Our Services</h3>
-                    <ul class="quick-links">
-                        <li><a href="#">Men's Grooming</a></li>
-                        <li><a href="#">Kids' Cuts</a></li>
-                        <li><a href="#">Baby's First Cut</a></li>
-                        <li><a href="#">Hair Treatments</a></li>
-                        <li><a href="#">Beard Care</a></li>
-                    </ul>
-                </div>
+        <!-- Slide 1 -->
+        <div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="1 of 5">
+          <div class="slide-bg">
+            <img src="https://images.unsplash.com/photo-1585747860715-2ba37e788b70?auto=format&fit=crop&w=1600&q=75"
+                 alt="Al-Malaika Life Style Salon interior" fetchpriority="high" decoding="async">
+          </div>
+          <div class="slide-overlay"></div>
+          <div class="slide-content">
+            <span class="badge-gold" id="heroLoc">Hazaribagh • Jharkhand</span>
+            <h1>Experience <span class="highlight">Premium</span> Grooming</h1>
+            <p id="heroSub">Hair • Beard • Facial • Spa</p>
+            <div class="hero-strip">
+              <span><b id="hRating">4.8</b> ★ · <span id="hReviews">15</span> Google reviews</span>
+              <span>Open daily <b id="hHours">08:00 AM – 10:00 PM</b></span>
+              <span><b>Home service</b> available</span>
             </div>
-            <div class="copyright">
-                <p>&copy; 2023 Al-Malaika Life Style Salon. All Rights Reserved.</p>
+            <div class="btn-group-hero">
+              <button class="btn g" type="button" data-book>
+                <span class="material-symbols-outlined" style="font-size:18px">calendar_month</span> Book Appointment
+              </button>
+              <a class="btn" href="#" data-tel>
+                <span class="material-symbols-outlined" style="font-size:18px">call</span> Call Now
+              </a>
             </div>
+          </div>
         </div>
-    </footer>
+
+        <!-- Slide 2 -->
+        <div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="2 of 5">
+          <div class="slide-bg">
+            <img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=1600&q=75"
+                 alt="Expert hair styling at Al-Malaika" loading="lazy" decoding="async">
+          </div>
+          <div class="slide-overlay"></div>
+          <div class="slide-content">
+            <span class="badge-gold">Expert Stylists</span>
+            <h1>Style That <span class="highlight">Defines</span> You</h1>
+            <p>Professional haircuts &amp; beard styling by expert barbers</p>
+            <div class="btn-group-hero">
+              <button class="btn g" type="button" data-book>
+                <span class="material-symbols-outlined" style="font-size:18px">calendar_month</span> Book Appointment
+              </button>
+              <a class="btn" href="#" data-tel>
+                <span class="material-symbols-outlined" style="font-size:18px">call</span> Call Now
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="3 of 5">
+          <div class="slide-bg">
+            <img src="https://images.unsplash.com/photo-1560066984-138daaa4e4e1?auto=format&fit=crop&w=1600&q=75"
+                 alt="Hair spa and relaxation area" loading="lazy" decoding="async">
+          </div>
+          <div class="slide-overlay"></div>
+          <div class="slide-content">
+            <span class="badge-gold">Luxury Experience</span>
+            <h1>Relax. Rejuvenate. <span class="highlight">Repeat.</span></h1>
+            <p>Premium hair spa, facials &amp; grooming packages</p>
+            <div class="btn-group-hero">
+              <button class="btn g" type="button" data-book>
+                <span class="material-symbols-outlined" style="font-size:18px">calendar_month</span> Book Appointment
+              </button>
+              <a class="btn" href="#" data-tel>
+                <span class="material-symbols-outlined" style="font-size:18px">call</span> Call Now
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 4 -->
+        <div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="4 of 5">
+          <div class="slide-bg">
+            <img src="https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?auto=format&fit=crop&w=1600&q=75"
+                 alt="Modern salon interior at Al-Malaika" loading="lazy" decoding="async">
+          </div>
+          <div class="slide-overlay"></div>
+          <div class="slide-content">
+            <span class="badge-gold">Modern Salon</span>
+            <h1>Where <span class="highlight">Style</span> Meets Comfort</h1>
+            <p>AC waiting area &bull; Sanitized equipment &bull; Premium products</p>
+            <div class="btn-group-hero">
+              <button class="btn g" type="button" data-book>
+                <span class="material-symbols-outlined" style="font-size:18px">calendar_month</span> Book Appointment
+              </button>
+              <a class="btn" href="#" data-tel>
+                <span class="material-symbols-outlined" style="font-size:18px">call</span> Call Now
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 5 -->
+        <div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="5 of 5">
+          <div class="slide-bg">
+            <img src="https://plus.unsplash.com/premium_photo-1711299478774-39fde03c2daf?auto=format&fit=crop&w=1600&q=75"
+                 alt="Bridal and groom grooming package" loading="lazy" decoding="async">
+          </div>
+          <div class="slide-overlay"></div>
+          <div class="slide-content">
+            <span class="badge-gold">Bridal &amp; Groom</span>
+            <h1>Your <span class="highlight">Special Day</span> Deserves The Best</h1>
+            <p>Bridal groom packages &amp; premium grooming services</p>
+            <div class="btn-group-hero">
+              <button class="btn g" type="button" data-book>
+                <span class="material-symbols-outlined" style="font-size:18px">calendar_month</span> Book Appointment
+              </button>
+              <a class="btn" href="#" data-tel>
+                <span class="material-symbols-outlined" style="font-size:18px">call</span> Call Now
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="swiper-pagination"></div>
+      <div class="swiper-button-prev" aria-label="Previous slide"></div>
+      <div class="swiper-button-next" aria-label="Next slide"></div>
+    </div>
+  </section>
+
+  <!-- ============ MARQUEE ============ -->
+  <div class="marq" aria-hidden="true">
+    <div class="marq-in" id="marq"></div>
+  </div>
+
+  <!-- ============ WHY US ============ -->
+  <section id="why">
+    <div class="w rv">
+      <span class="lb">Why Al-Malaika</span>
+      <h2 class="big">Crafted for<br>your style.</h2>
+      <p class="t">Every appointment is designed around detail, comfort and a confident finish — in salon or at your doorstep.</p>
+      <div class="grid g3" id="whyGrid"></div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       VIDEO SHORTS (autoplay · mute · loop)
+       ========================================================= -->
+  <section class="alt" id="videos">
+    <div class="w rv">
+      <span class="lb">Watch Our Work</span>
+      <h2 class="mid">See the Al-Malaika<br>experience in action.</h2>
+      <p class="t">Real transformations, real clients — straight from our salon floor.</p>
+
+      <div class="videos">
+
+        <div class="vcard">
+          <div class="frame">
+            <iframe
+              src="https://www.youtube.com/embed/0-YrGXnUv98?autoplay=1&mute=1&loop=1&playlist=0-YrGXnUv98&rel=0&modestbranding=1&playsinline=1"
+              title="Al-Malaika Life Style Salon — Video 1"
+              loading="lazy"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen></iframe>
+          </div>
+          <div class="vmeta">
+            <span class="material-symbols-outlined">play_circle</span>
+            <p>Salon Highlights</p>
+          </div>
+        </div>
+
+        <div class="vcard">
+          <div class="frame">
+            <iframe
+              src="https://www.youtube.com/embed/V52_rhqBuu8?autoplay=1&mute=1&loop=1&playlist=V52_rhqBuu8&rel=0&modestbranding=1&playsinline=1"
+              title="Al-Malaika Life Style Salon — Video 2"
+              loading="lazy"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen></iframe>
+          </div>
+          <div class="vmeta">
+            <span class="material-symbols-outlined">content_cut</span>
+            <p>Grooming in Action</p>
+          </div>
+        </div>
+
+        <div class="vcard">
+          <div class="frame">
+            <iframe
+              src="https://www.youtube.com/embed/V52_rhqBuu8?autoplay=1&mute=1&loop=1&playlist=V52_rhqBuu8&rel=0&modestbranding=1&playsinline=1"
+              title="Al-Malaika Life Style Salon — Video 3"
+              loading="lazy"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen></iframe>
+          </div>
+          <div class="vmeta">
+            <span class="material-symbols-outlined">face_retouching_natural</span>
+            <p>Client Transformations</p>
+          </div>
+        </div>
+
+        <div class="vcard">
+          <div class="frame">
+            <iframe
+              src="https://www.youtube.com/embed/aRx0hN50jBE?autoplay=1&mute=1&loop=1&playlist=aRx0hN50jBE&rel=0&modestbranding=1&playsinline=1"
+              title="Al-Malaika Life Style Salon — Video 4"
+              loading="lazy"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen></iframe>
+          </div>
+          <div class="vmeta">
+            <span class="material-symbols-outlined">spa</span>
+            <p>Relax &amp; Rejuvenate</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CATEGORIES / BANNERS ============ -->
+  <section id="services">
+    <div class="w rv" style="padding-inline:0">
+      <div style="padding-inline:22px">
+        <span class="lb">The Al-Malaika Experience</span>
+        <h2 class="big">One salon.<br>Every detail.</h2>
+      </div>
+      <div class="cats" id="cats"></div>
+    </div>
+  </section>
+
+  <!-- ============ QUICK SERVICES ============ -->
+  <section class="alt" id="quick">
+    <div class="w rv">
+      <span class="lb">Quick Services</span>
+      <h2 class="mid">Book in a minute.</h2>
+      <p class="t">Our most requested grooming services — transparent pricing, expert hands.</p>
+      <div class="grid g3" id="quickGrid"></div>
+    </div>
+  </section>
+
+  <!-- ============ POPULAR / SIGNATURE ============ -->
+  <section id="popular">
+    <div class="w rv">
+      <span class="lb">Signature Services</span>
+      <h2 class="mid">The Al-Malaika Edit</h2>
+      <p class="t">Premium treatments curated by our senior stylists.</p>
+      <div class="grid g3" id="popGrid"></div>
+    </div>
+  </section>
+
+  <!-- ============ OFFERS ============ -->
+  <section class="alt" id="offers">
+    <div class="w rv">
+      <span class="lb">Offers</span>
+      <h2 class="big">Current offers.</h2>
+      <div class="offers" id="offerGrid"></div>
+    </div>
+  </section>
+
+  <!-- ============ PRICE LIST ============ -->
+  <section id="prices">
+    <div class="w rv">
+      <span class="lb">Price List</span>
+      <h2 class="big">Simple pricing.</h2>
+      <p class="t">No hidden charges. All prices in INR, inclusive of taxes.</p>
+      <div class="plwrap" id="plwrap"></div>
+    </div>
+  </section>
+
+  <!-- ============ TEAM ============ -->
+  <section class="alt" id="team">
+    <div class="w rv">
+      <span class="lb">Our Team</span>
+      <h2 class="big">Meet the experts.</h2>
+      <p class="t">Choose your preferred stylist, or let us assign the best available.</p>
+      <div class="team" id="teamGrid"></div>
+    </div>
+  </section>
+
+  <!-- ============ GALLERY ============ -->
+  <section id="gallery">
+    <div class="w rv">
+      <span class="lb">Gallery</span>
+      <h2 class="big">Step inside Al-Malaika.</h2>
+      <div class="gl" id="gl"></div>
+    </div>
+  </section>
+
+  <!-- ============ REVIEWS ============ -->
+  <section class="alt" id="reviews">
+    <div class="w rv">
+      <span class="lb">Reviews</span>
+      <h2 class="big">What clients say.</h2>
+      <div class="rhead">
+        <div class="rscore" id="rScore">4.8</div>
+        <div>
+          <div class="stars" id="rStars"></div>
+          <p class="t" style="margin:8px 0 0;font-size:.86rem">Based on <b id="rCount" style="color:var(--off)">15</b> Google reviews</p>
+        </div>
+        <div style="margin-left:auto"><a class="btn" id="gr" href="#" target="_blank" rel="noopener">View on Google</a></div>
+      </div>
+      <div class="rgrid" id="revGrid"></div>
+    </div>
+  </section>
+
+  <!-- ============ HOME SERVICE ============ -->
+  <section id="home">
+    <div class="w rv center">
+      <span class="lb">Al-Malaika Home Service</span>
+      <h2 class="big">Your style.<br>Your place.</h2>
+      <p class="t" id="homeMsg">Book your preferred grooming service at your doorstep.</p>
+      <div class="hv" id="hv"></div>
+      <p class="hnote">
+        Minimum booking <b id="hMin">₹199</b> · Service charge <b id="hCharge">₹49</b>
+        (free above <b id="hFree">₹999</b>) · Book at least <b id="hAdv">2 hours</b> ahead
+      </p>
+      <div class="slots" id="homeSlots"></div>
+      <div class="row">
+        <button class="btn g" data-book="home">Book Home Service</button>
+        <a class="btn" data-wa target="_blank" rel="noopener">WhatsApp Us</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FRANCHISE ============ -->
+  <section class="alt" id="franchise">
+    <div class="w rv">
+      <span class="lb">Franchise Opportunity</span>
+      <h2 class="big" id="frTitle">Own an Al-Malaika<br>Life Style Salon.</h2>
+      <div class="fr">
+        <div>
+          <div class="fr-banner"><img id="frImg" src="" alt="Al-Malaika franchise"></div>
+          <div class="fr-facts">
+            <div><small>Investment</small><b id="frInv">—</b></div>
+            <div><small>Franchise Fee</small><b id="frFee">—</b></div>
+            <div><small>Shop Area</small><b id="frArea">—</b></div>
+            <div><small>Expected ROI</small><b id="frRoi">—</b></div>
+          </div>
+        </div>
+        <div>
+          <p class="t" id="frDesc" style="margin-top:0"></p>
+          <p class="t" style="font-size:.88rem"><b style="color:var(--off)">Preferred location:</b> <span id="frLoc"></span></p>
+          <div class="row">
+            <a class="btn g" id="frWa" href="#" target="_blank" rel="noopener">Enquire on WhatsApp</a>
+            <a class="btn" id="frMail" href="#">Email Us</a>
+          </div>
+        </div>
+      </div>
+      <div class="fr-lists" style="margin-top:50px">
+        <div>
+          <h3>What you get</h3>
+          <ul id="frSupport"></ul>
+        </div>
+        <div>
+          <h3>Requirements</h3>
+          <ul id="frReq"></ul>
+          <h3 style="margin-top:30px">Benefits</h3>
+          <ul id="frBen"></ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ LOCATION ============ -->
+  <section id="loc">
+    <div class="w locgrid">
+      <div class="rv">
+        <span class="lb">Find Al-Malaika</span>
+        <h2 class="big">Come visit us.</h2>
+        <div class="hours"><span class="dot" id="dot"></span><span id="openState">Checking…</span></div>
+        <dl class="info">
+          <b id="locName">Al-Malaika Life Style Salon</b>
+          <span id="locAddr"></span>
+          <span>Open <span id="locDays"></span> · <span id="locHours"></span></span>
+          <a href="#" data-tel><span id="locPhone"></span></a>
+          <a href="#" id="locMail"></a>
+        </dl>
+        <div class="row">
+          <a class="btn g" id="dir" href="#" target="_blank" rel="noopener">Get Directions</a>
+          <a class="btn" href="#" data-tel>Call Now</a>
+          <a class="btn" data-wa target="_blank" rel="noopener">WhatsApp</a>
+        </div>
+      </div>
+      <div class="rv">
+        <span class="lb">On the map</span>
+        <h3 class="sm-h">Alfalah Colony, Pugmil</h3>
+        <p class="t">Pugmil, Hazaribagh — easy to reach, ample parking nearby.</p>
+        <iframe class="map" title="Map to Al-Malaika Life Style Salon" loading="lazy" id="mapFrame" src=""></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CTA ============ -->
+  <section class="cta">
+    <div class="w rv">
+      <h2 class="big">Ready for<br>your next look?</h2>
+      <p class="t" style="margin-inline:auto">Book your grooming experience at Al-Malaika Life Style Salon, Hazaribagh.</p>
+      <div class="row">
+        <button class="btn g" data-book>Book Now</button>
+        <a class="btn" href="#" data-tel>Call <span id="ctaPhone"></span></a>
+        <a class="btn" data-wa target="_blank" rel="noopener">WhatsApp Us</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="w fgrid">
+    <div>
+      <div class="logo" style="color:var(--off)">AL-MALAIKA<small>LIFE STYLE SALON</small></div>
+      <p id="fAbout" style="margin-top:16px"></p>
+      <p id="fContact"></p>
+    </div>
+    <div>
+      <h4>DISCOVER</h4>
+      <a href="#services">Services</a>
+      <a href="#prices">Price List</a>
+      <a href="#offers">Offers</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#videos">Videos</a>
+      <a href="#home">Home Service</a>
+      <a href="#franchise">Franchise</a>
+    </div>
+    <div>
+      <h4>CONNECT</h4>
+      <a data-wa target="_blank" rel="noopener">WhatsApp</a>
+      <a data-ig target="_blank" rel="noopener">Instagram</a>
+      <a data-fb target="_blank" rel="noopener">Facebook</a>
+      <a id="fPlay" href="#" target="_blank" rel="noopener">Get the App</a>
+      <a href="#" data-tel>Call Us</a>
+    </div>
+    <div>
+      <h4>LEGAL</h4>
+      <a id="fPrivacy" href="#" target="_blank" rel="noopener">Privacy Policy</a>
+      <a id="fTerms" href="#" target="_blank" rel="noopener">Terms of Service</a>
+      <a id="fAboutLink" href="#" target="_blank" rel="noopener">About Us</a>
+    </div>
+  </div>
+  <div class="w fbot">
+    <span>© <span id="year"></span> Al-Malaika Life Style Salon · Hazaribagh, Jharkhand</span>
+    <span>App v<span id="appVer"></span> · Updated <span id="lastUp"></span></span>
+  </div>
+</footer>
+
+<!-- ============ BOTTOM BAR ============ -->
+<nav class="bar" aria-label="Quick actions">
+  <a href="#" data-tel><span class="material-symbols-outlined">call</span>CALL</a>
+  <a data-wa target="_blank" rel="noopener"><span class="material-symbols-outlined">chat</span>WHATSAPP</a>
+  <button class="k" data-book><span class="material-symbols-outlined">calendar_month</span>BOOK</button>
+  <a id="dir2" href="#" target="_blank" rel="noopener"><span class="material-symbols-outlined">location_on</span>MAP</a>
+</nav>
+
+<!-- ============ LIGHTBOX ============ -->
+<div id="lbx" role="dialog" aria-modal="true" aria-label="Image viewer">
+  <button class="btn x" id="lx">Close</button>
+  <button class="nav p" id="lpv" aria-label="Previous image">‹</button>
+  <div>
+    <img id="limg" src="" alt="">
+    <div class="cap" id="lcap"></div>
+  </div>
+  <button class="nav n" id="lnx" aria-label="Next image">›</button>
+</div>
+
+<!-- ============ BOOKING MODAL ============ -->
+<div id="bk" role="dialog" aria-modal="true" aria-label="Book your Al-Malaika experience">
+  <div class="in">
+    <div class="bk-top">
+      <span class="prog" id="pg">STEP 01 / 06</span>
+      <button class="mb" id="bx">CLOSE</button>
+    </div>
+    <div class="pbar"><i id="pbar"></i></div>
+    <h2 class="mid" style="margin:20px 0 4px;font-size:clamp(1.9rem,5vw,3rem)">Book your Al-Malaika experience</h2>
+    <p class="t" style="margin-top:8px;font-size:.86rem">We'll confirm your slot on WhatsApp.</p>
+
+    <form id="bkForm" novalidate>
+      <!-- 1 service -->
+      <div class="stp on">
+        <label for="fService">01 · Select service</label>
+        <select id="fService"></select>
+        <p class="t" style="font-size:.8rem;margin-top:10px" id="svcHint"></p>
+      </div>
+
+      <!-- 2 stylist -->
+      <div class="stp">
+        <label>02 · Preferred stylist</label>
+        <div class="chips" id="barberChips"></div>
+      </div>
+
+      <!-- 3 date -->
+      <div class="stp">
+        <label for="fDate">03 · Preferred date</label>
+        <input type="date" id="fDate">
+        <div class="chips" id="dateChips"></div>
+      </div>
+
+      <!-- 4 time -->
+      <div class="stp">
+        <label>04 · Preferred time</label>
+        <div class="chips" id="timeChips"></div>
+      </div>
+
+      <!-- 5 visit type -->
+      <div class="stp">
+        <label>05 · Salon visit or home service</label>
+        <div class="chips" id="visitChips">
+          <button type="button" class="chip sel" data-visit="salon">Salon visit</button>
+          <button type="button" class="chip" data-visit="home">Home service</button>
+        </div>
+        <div id="addrWrap" style="display:none">
+          <label for="fAddr">Full address &amp; landmark</label>
+          <textarea id="fAddr" rows="3" placeholder="House / flat, street, area, landmark…"></textarea>
+        </div>
+        <p class="t" style="font-size:.8rem;margin-top:12px" id="visitHint"></p>
+      </div>
+
+      <!-- 6 details -->
+      <div class="stp">
+        <label for="fName">06 · Your name</label>
+        <input id="fName" autocomplete="name" placeholder="Full name">
+        <label for="fPhone">Mobile number</label>
+        <input id="fPhone" type="tel" inputmode="numeric" autocomplete="tel" placeholder="10-digit mobile number">
+        <label for="fNotes">Notes (optional)</label>
+        <textarea id="fNotes" rows="2" placeholder="Any preference or request…"></textarea>
+      </div>
+
+      <!-- confirmation -->
+      <div class="stp" id="stConfirm"></div>
+    </form>
+
+    <p class="err" id="fErr" role="alert"></p>
+    <div class="bk-nav" id="bkNav">
+      <button class="btn" id="pv" type="button">Back</button>
+      <button class="btn g" id="nx" type="button">Next</button>
+    </div>
+  </div>
+</div>
+
+<div id="toast" role="status" aria-live="polite"></div>
+
+<!-- ============ SCRIPTS ============ -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>
+/* =========================================================
+   DATA
+   ========================================================= */
+const DATA = {
+  metadata:{schemaVersion:"1.1.0",lastUpdated:"2026-08-11",locale:"en-IN",currencyCode:"INR"},
+  salon:{
+    id:1,name:"Al-Malaika Life Style Salon",about:"Premium family grooming services in Hazaribagh.",
+    tagline:"Experience Premium Grooming",
+    owner:"Md Arif Hussain",
+    address:"Alfalah Colony, Pugmil, Hazaribagh, Jharkhand 825319",
+    mobileNumber:"+919708101242",mobileNumberDial:"9708101242",
+    email:"contact@almalaikasalon.in",whatsappUrl:"https://wa.me/919708101242",
+    rating:4.8,totalReviews:15,latitude:23.9988,longitude:85.3612,
+    openingHours:"08:00 AM – 10:00 PM",workingDays:"Monday – Sunday",
+    mapsEmbedUrl:"https://maps.google.com/maps?q=Al-Malaika+Life+Style+Salon+Alfalah+Colony+Pugmil+Hazaribagh+Jharkhand+825319&z=16&output=embed",
+    mapsSearchUrl:"https://www.google.com/maps/search/Al-Malaika+Life+Style+Salon+Alfalah+Colony+Pugmil+Hazaribagh+Jharkhand+825319",
+    playStoreUrl:"https://play.google.com/store/apps/details?id=com.almalaika.android",
+    social:{instagram:"https://www.instagram.com/almalaikasalon",facebook:"https://www.facebook.com/almalaikasalon"}
+  },
+  banners:[
+    {id:1,imageUrl:"https://images.unsplash.com/photo-1585747860715-2ba37e788b70?auto=format&fit=crop&w=800&q=80",title:"Experience Premium Grooming",subtitle:"Hair • Beard • Facial • Spa",category:"SERVICES",serviceType:"SALON",isAvailable:true},
+    {id:2,imageUrl:"https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=800&q=80",title:"Expert Hair Styling",subtitle:"Crafted with precision & care",category:"HAIR",serviceType:"SALON",isAvailable:true},
+    {id:3,imageUrl:"https://images.unsplash.com/photo-1621605815971-fbc98d665033?auto=format&fit=crop&w=800&q=80",title:"Beard Grooming Redefined",subtitle:"Shape your style with confidence",category:"BEARD",serviceType:"SALON",isAvailable:true},
+    {id:4,imageUrl:"https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=800&q=80",title:"Luxury Facial Treatments",subtitle:"Radiant skin, refreshed look",category:"FACIAL",serviceType:"SALON",isAvailable:true},
+    {id:5,imageUrl:"https://images.unsplash.com/photo-1633099880479-21a590bcef06?auto=format&fit=crop&w=800&q=80",title:"The Art of Relaxation",subtitle:"Spa & massage for mind & body",category:"SPA",serviceType:"SALON",isAvailable:true},
+    {id:6,imageUrl:"https://plus.unsplash.com/premium_photo-1675949335489-f778abf84197?auto=format&fit=crop&w=800&q=80",title:"Summer Refresh",subtitle:"Get 20% off on all Hair Spa services",category:"OFFERS",serviceType:"SALON",isAvailable:true},
+    {id:7,imageUrl:"https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=1200&q=80",title:"Home Grooming",subtitle:"Professional stylists at your doorstep",category:"HOME",serviceType:"SALON",isAvailable:true}
+  ],
+  quickServices:[
+    {id:1,name:"Hair Cut",description:"Precision cut tailored to your face shape by expert stylists.",price:150,imageUrl:"https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=400&q=80",category:"HAIR",serviceType:"SALON",isAvailable:true},
+    {id:2,name:"Beard Trim",description:"Expert beard styling, shaping, and grooming for a sharp look.",price:80,imageUrl:"https://images.unsplash.com/photo-1599011176306-4a96f1516d4d?auto=format&fit=crop&w=387&q=80",category:"BEARD",serviceType:"SALON",isAvailable:true},
+    {id:3,name:"Facial",description:"Deep cleansing facial for refreshed, glowing skin.",price:699,imageUrl:"https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=400&q=80",category:"FACIAL",serviceType:"SALON",isAvailable:true},
+    {id:4,name:"Hair Spa",description:"Nourishing spa treatment for healthy, lustrous hair.",price:499,imageUrl:"https://images.unsplash.com/photo-1571454870646-86bf1e5b25ae?auto=format&fit=crop&w=387&q=80",category:"SPA",serviceType:"SALON",isAvailable:true},
+    {id:5,name:"Hair Color",description:"Vibrant, long-lasting color using premium products.",price:699,imageUrl:"https://images.unsplash.com/photo-1562322140-8baeececf3df?auto=format&fit=crop&w=400&q=80",category:"HAIR",serviceType:"SALON",isAvailable:true},
+    {id:6,name:"Massage",description:"Relaxing full body massage to relieve stress and tension.",price:199,imageUrl:"https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=400&q=80",category:"MASSAGE",serviceType:"SALON",isAvailable:true},
+    {id:7,name:"Kids Haircut",description:"Fun, gentle haircuts for the little ones.",price:120,imageUrl:"https://plus.unsplash.com/premium_photo-1677098576397-d3403bf838a0?auto=format&fit=crop&w=1374&q=80",category:"KIDS",serviceType:"SALON",isAvailable:true}
+  ],
+  popularServices:[
+    {id:101,name:"Premium Hair Cut",description:"Luxury hair cut with hot towel, scalp massage & premium finish.",price:250,imageUrl:"https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=400&q=80",category:"HAIR",serviceType:"SALON",isAvailable:true},
+    {id:102,name:"Hair Spa",description:"Deep conditioning spa with steam & nourishing serum treatment.",price:499,imageUrl:"https://images.unsplash.com/photo-1571454870646-86bf1e5b25ae?auto=format&fit=crop&w=387&q=80",category:"SPA",serviceType:"SALON",isAvailable:true},
+    {id:103,name:"Hair Color",description:"Full head or highlight coloring using L'Oreal professional products.",price:699,imageUrl:"https://images.unsplash.com/photo-1562322140-8baeececf3df?auto=format&fit=crop&w=400&q=80",category:"HAIR",serviceType:"SALON",isAvailable:true},
+    {id:104,name:"Facial Treatment",description:"Advanced skin rejuvenation with premium serums and massage.",price:699,imageUrl:"https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=400&q=80",category:"FACIAL",serviceType:"SALON",isAvailable:true},
+    {id:105,name:"Cleanup",description:"Quick refresh with deep pore cleansing and moisturising mask.",price:399,imageUrl:"https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?auto=format&fit=crop&w=400&q=80",category:"FACIAL",serviceType:"SALON",isAvailable:true},
+    {id:106,name:"D-Tan",description:"Effective tan removal treatment for even skin tone.",price:599,imageUrl:"https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=400&q=80",category:"FACIAL",serviceType:"SALON",isAvailable:true},
+    {id:107,name:"Beard Styling",description:"Expert beard shaping, hot towel & precision styling.",price:150,imageUrl:"https://images.unsplash.com/photo-1621605815971-fbc98d665033?auto=format&fit=crop&w=400&q=80",category:"BEARD",serviceType:"SALON",isAvailable:true},
+    {id:108,name:"Head Massage",description:"Therapeutic scalp and head massage using aromatic oils.",price:199,imageUrl:"https://plus.unsplash.com/premium_photo-1726776133324-540344f791d8?auto=format&fit=crop&w=870&q=80",category:"MASSAGE",serviceType:"SALON",isAvailable:true},
+    {id:109,name:"Kids Haircut",description:"Gentle, fun cuts for kids of all ages with care and patience.",price:120,imageUrl:"https://plus.unsplash.com/premium_photo-1677098576397-d3403bf838a0?auto=format&fit=crop&w=1374&q=80",category:"KIDS",serviceType:"SALON",isAvailable:true},
+    {id:110,name:"Groom Package",description:"Complete groom makeover: haircut + beard + facial + massage.",price:1499,imageUrl:"https://plus.unsplash.com/premium_photo-1711299478774-39fde03c2daf?auto=format&fit=crop&w=387&q=80",category:"PACKAGE",serviceType:"SALON",isAvailable:true},
+    {id:111,name:"Bridal Groom",description:"Exclusive bridal groom package for the most important day of your life.",price:2999,imageUrl:"https://images.unsplash.com/photo-1679599441308-0f9e95330ac5?auto=format&fit=crop&w=386&q=80",category:"PACKAGE",serviceType:"SALON",isAvailable:true}
+  ],
+  homeServices:[
+    {id:201,name:"Hair Cut at Home",description:"Professional haircut at your doorstep by an experienced stylist.",price:199,imageUrl:"https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=400&q=80",category:"HAIR",serviceType:"HOME",isAvailable:true},
+    {id:202,name:"Beard Trim at Home",description:"Expert beard trimming and styling at your home.",price:129,imageUrl:"https://images.unsplash.com/photo-1621605815971-fbc98d665033?auto=format&fit=crop&w=400&q=80",category:"BEARD",serviceType:"HOME",isAvailable:true},
+    {id:203,name:"Facial at Home",description:"Relaxing facial treatment delivered at your doorstep.",price:799,imageUrl:"https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=400&q=80",category:"FACIAL",serviceType:"HOME",isAvailable:true},
+    {id:204,name:"Hair Spa at Home",description:"Nourishing hair spa treatment at the comfort of your home.",price:599,imageUrl:"https://images.unsplash.com/photo-1571454870646-86bf1e5b25ae?auto=format&fit=crop&w=400&q=80",category:"SPA",serviceType:"HOME",isAvailable:true},
+    {id:205,name:"Head Massage at Home",description:"Relaxing head and scalp massage at your doorstep.",price:249,imageUrl:"https://plus.unsplash.com/premium_photo-1726776133324-540344f791d8?auto=format&fit=crop&w=400&q=80",category:"MASSAGE",serviceType:"HOME",isAvailable:true},
+    {id:206,name:"Kids Haircut at Home",description:"Gentle and comfortable haircut for kids at home.",price:169,imageUrl:"https://plus.unsplash.com/premium_photo-1677098576397-d3403bf838a0?auto=format&fit=crop&w=400&q=80",category:"KIDS",serviceType:"HOME",isAvailable:true},
+    {id:207,name:"Grooming Package at Home",description:"Complete grooming package including haircut, beard trim and facial at home.",price:1299,imageUrl:"https://plus.unsplash.com/premium_photo-1711299478774-39fde03c2daf?auto=format&fit=crop&w=400&q=80",category:"PACKAGE",serviceType:"HOME",isAvailable:true}
+  ],
+  homeServiceBooking:{
+    enabled:true,minimumBookingAmount:199,serviceCharge:49,freeServiceChargeAbove:999,
+    advanceBookingHours:2,
+    bookingMessage:"Book your preferred grooming service at your doorstep.",
+    availableDays:["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+    timeSlots:[
+      {id:1,time:"09:00 AM",isAvailable:true},{id:2,time:"10:00 AM",isAvailable:true},
+      {id:3,time:"11:00 AM",isAvailable:true},{id:4,time:"12:00 PM",isAvailable:true},
+      {id:5,time:"01:00 PM",isAvailable:true},{id:6,time:"02:00 PM",isAvailable:true},
+      {id:7,time:"03:00 PM",isAvailable:true},{id:8,time:"04:00 PM",isAvailable:true},
+      {id:9,time:"05:00 PM",isAvailable:true},{id:10,time:"06:00 PM",isAvailable:true},
+      {id:11,time:"07:00 PM",isAvailable:true}
+    ]
+  },
+  priceList:[
+    {id:1,name:"Hair Cut",price:150,category:"HAIR",description:"Classic precision cut"},
+    {id:2,name:"Premium Hair Cut",price:250,category:"HAIR",description:"Luxury cut with hot towel & massage"},
+    {id:3,name:"Beard Trim",price:80,category:"BEARD",description:"Shape and style your beard"},
+    {id:4,name:"Shaving",price:100,category:"BEARD",description:"Hot towel clean shave"},
+    {id:5,name:"Hair Spa",price:499,category:"SPA",description:"Nourishing deep conditioning"},
+    {id:6,name:"Facial",price:699,category:"FACIAL",description:"Advanced skin rejuvenation"},
+    {id:7,name:"Cleanup",price:399,category:"FACIAL",description:"Deep pore cleansing mask"},
+    {id:8,name:"Hair Coloring",price:699,category:"HAIR",description:"Full color with premium products"},
+    {id:9,name:"Massage",price:199,category:"MASSAGE",description:"Stress-relief body massage"},
+    {id:10,name:"Kids Haircut",price:120,category:"KIDS",description:"Gentle cut for children"},
+    {id:11,name:"D-Tan",price:599,category:"FACIAL",description:"Effective tan removal"},
+    {id:12,name:"Groom Package",price:1499,category:"PACKAGE",description:"Complete groom makeover combo"},
+    {id:13,name:"Bridal Groom",price:2999,category:"PACKAGE",description:"Premium bridal groom package"}
+  ],
+  offers:[
+    {id:1,title:"Hair Spa Special",subtitle:"Book a hair spa and save big this season",discountText:"20% OFF",validUntil:"Valid till 31 Aug 2026",gradientStartHex:"#C9A84C",gradientEndHex:"#8B6914",imageUrl:"https://images.unsplash.com/photo-1571454870646-86bf1e5b25ae?auto=format&fit=crop&w=387&q=80"},
+    {id:2,title:"Student Discount",subtitle:"Show your student ID and enjoy special pricing",discountText:"15% OFF",validUntil:"Valid all year",gradientStartHex:"#1E3C72",gradientEndHex:"#2A5298",imageUrl:"https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=400&q=80"},
+    {id:3,title:"Festival Offer",subtitle:"Celebrate in style with our exclusive festival package",discountText:"25% OFF",validUntil:"Limited time offer",gradientStartHex:"#870000",gradientEndHex:"#190A05",imageUrl:"https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&q=80"},
+    {id:4,title:"Weekend Combo",subtitle:"Haircut + Beard + Facial at an unbeatable price",discountText:"COMBO",validUntil:"Every Saturday & Sunday",gradientStartHex:"#134E5E",gradientEndHex:"#71B280",imageUrl:"https://images.unsplash.com/photo-1621605815971-fbc98d665033?auto=format&fit=crop&w=400&q=80"},
+    {id:5,title:"Free Beard Trim",subtitle:"Get a free beard trim with any haircut service",discountText:"FREE",validUntil:"Valid on weekdays",gradientStartHex:"#373B44",gradientEndHex:"#4286F4",imageUrl:"https://images.unsplash.com/photo-1599011176306-4a96f1516d4d?auto=format&fit=crop&w=387&q=80"}
+  ],
+  reviews:[
+    {id:1,name:"Rahul Sharma",initials:"RS",rating:5,comment:"Best salon in Hazaribagh! The premium haircut was amazing. Very professional staff.",date:"2 weeks ago"},
+    {id:2,name:"Amit Kumar",initials:"AK",rating:5,comment:"Great service and clean environment. The beard styling was perfect. Will come again.",date:"1 month ago"},
+    {id:3,name:"Junaid Ali",initials:"JA",rating:5,comment:"Absolutely love the facial treatment here. Skin feels so refreshed. Highly recommend!",date:"3 weeks ago"},
+    {id:4,name:"Suresh Yadav",initials:"SY",rating:4,comment:"Good service, but the wait time was a bit long. Overall satisfied with the haircut.",date:"2 months ago"},
+    {id:5,name:"Deepak Mishra",initials:"DM",rating:5,comment:"Excellent hair spa. Very relaxing experience. The staff is friendly and skilled.",date:"1 week ago"},
+    {id:6,name:"Salman Ali",initials:"SA",rating:5,comment:"Nice ambiance and expert barbers. The groom package was worth every rupee.",date:"3 months ago"},
+    {id:7,name:"Arjun Pandey",initials:"AP",rating:4,comment:"Average experience. The haircut was okay but expected better for the price.",date:"4 months ago"}
+  ],
+  barbers:[
+    {id:1,name:"Any Available",expertise:"Expert in all services",imageUrl:""},
+    {id:2,name:"Md Arif Hussain",expertise:"Founder & Senior Stylist",imageUrl:"https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&q=80"},
+    {id:3,name:"Amit Singh",expertise:"Beard & Grooming Specialist",imageUrl:"https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=200&q=80"},
+    {id:4,name:"Sunil Sharma",expertise:"Facial & Skin Care Expert",imageUrl:"https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=200&q=80"},
+    {id:5,name:"Md Maruph",expertise:"Hair Color & Styling Pro",imageUrl:"https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=200&q=80"}
+  ],
+  galleryItems:[
+    {id:1,imageUrl:"https://images.unsplash.com/photo-1585747860715-2ba37e788b70?auto=format&fit=crop&w=400&q=80",title:"Salon Interior",aspectRatio:1},
+    {id:2,imageUrl:"https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=400&q=80",title:"Hair Cut",aspectRatio:1.2},
+    {id:3,imageUrl:"https://images.unsplash.com/photo-1621605815971-fbc98d665033?auto=format&fit=crop&w=400&q=80",title:"Beard Style",aspectRatio:0.8},
+    {id:4,imageUrl:"https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=400&q=80",title:"Salon Chair",aspectRatio:1},
+    {id:5,imageUrl:"https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=400&q=80",title:"Hair Spa",aspectRatio:1.3},
+    {id:6,imageUrl:"https://images.unsplash.com/photo-1562322140-8baeececf3df?auto=format&fit=crop&w=400&q=80",title:"Hair Color",aspectRatio:0.9},
+    {id:7,imageUrl:"https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=400&q=80",title:"Facial",aspectRatio:1.1},
+    {id:8,imageUrl:"https://plus.unsplash.com/premium_photo-1661628776646-e7d151b0d169?auto=format&fit=crop&w=870&q=80",title:"Massage",aspectRatio:1},
+    {id:9,imageUrl:"https://images.unsplash.com/photo-1595407753234-0882f1e77954?auto=format&fit=crop&w=870&q=80",title:"Groom Style",aspectRatio:1.2},
+    {id:10,imageUrl:"https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=400&q=80",title:"Premium Cut",aspectRatio:0.8},
+    {id:11,imageUrl:"https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?auto=format&fit=crop&w=400&q=80",title:"Cleanup",aspectRatio:1},
+    {id:12,imageUrl:"https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=400&q=80",title:"D-Tan",aspectRatio:1.1},
+    {id:13,imageUrl:"https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=400&q=80",title:"Barber",aspectRatio:1},
+    {id:14,imageUrl:"https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=400&q=80",title:"Stylist",aspectRatio:1.2},
+    {id:15,imageUrl:"https://images.unsplash.com/photo-1723373457096-54329042b2b5?auto=format&fit=crop&w=774&q=80",title:"Grooming",aspectRatio:0.9},
+    {id:16,imageUrl:"https://images.unsplash.com/photo-1761931403807-f33fc582b1f5?auto=format&fit=crop&w=774&q=80",title:"Hair Tools",aspectRatio:1},
+    {id:17,imageUrl:"https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?auto=format&fit=crop&w=400&q=80",title:"Client",aspectRatio:1.3},
+    {id:18,imageUrl:"https://images.unsplash.com/photo-1612817288484-6f916006741a?auto=format&fit=crop&w=400&q=80",title:"Scissors",aspectRatio:0.8},
+    {id:19,imageUrl:"https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=400&q=80",title:"Spa Area",aspectRatio:1.1},
+    {id:20,imageUrl:"https://images.unsplash.com/photo-1660557989695-14fac79c086d?auto=format&fit=crop&w=400&q=80",title:"Reception",aspectRatio:1}
+  ],
+  whyChooseUs:[
+    {id:1,icon:"star",title:"Experienced Stylists",description:"20+ years of professional expertise in premium grooming"},
+    {id:2,icon:"chair",title:"Luxury Interior",description:"Opulent salon ambiance for a premium experience"},
+    {id:3,icon:"health_and_safety",title:"Sanitized Equipment",description:"100% sterilized tools after every client for your safety"},
+    {id:4,icon:"currency_rupee",title:"Affordable Pricing",description:"Premium quality services at pocket-friendly prices"},
+    {id:5,icon:"workspace_premium",title:"Premium Products",description:"Only internationally acclaimed brands used"},
+    {id:6,icon:"calendar_month",title:"Online Booking",description:"Easy WhatsApp booking, no waiting in queues"}
+  ],
+  timeSlots:[
+    {id:1,time:"08:00 AM",isAvailable:true},{id:2,time:"09:00 AM",isAvailable:true},
+    {id:3,time:"10:00 AM",isAvailable:true},{id:4,time:"11:00 AM",isAvailable:true},
+    {id:5,time:"12:00 PM",isAvailable:true},{id:6,time:"01:00 PM",isAvailable:true},
+    {id:7,time:"02:00 PM",isAvailable:true},{id:8,time:"03:00 PM",isAvailable:true},
+    {id:9,time:"04:00 PM",isAvailable:true},{id:10,time:"05:00 PM",isAvailable:true},
+    {id:11,time:"06:00 PM",isAvailable:true},{id:12,time:"07:00 PM",isAvailable:true},
+    {id:13,time:"08:00 PM",isAvailable:true},{id:14,time:"09:00 PM",isAvailable:true}
+  ],
+  profile:{
+    appName:"Al-Malaika Life Style Salon",appVersion:"1.0.0",
+    shareMessage:"Experience premium family grooming at Al-Malaika Life Style Salon. Book your appointment today!",
+    supportEmail:"contact@almalaikasalon.in",supportPhone:"+91 97081 01242",
+    privacyPolicyUrl:"https://er-md-hafiz.github.io/salon/privacy.html",
+    termsUrl:"https://er-md-hafiz.github.io/salon/terms.html",
+    aboutUs:"https://er-md-hafiz.github.io/salon/aboutus.html",
+    darkModeEnabled:true,notificationEnabled:true,
+    menuItems:[
+      {id:1,title:"Dark Mode",type:"toggle",enabled:true,icon:"dark_mode"},
+      {id:2,title:"Notifications",type:"toggle",enabled:true,icon:"notifications"},
+      {id:3,title:"Contact Us",type:"contact",icon:"call"},
+      {id:4,title:"Location",type:"location",icon:"location_on"},
+      {id:5,title:"Share App",type:"share",icon:"share"},
+      {id:6,title:"Rate Us on Google Play",type:"rate",icon:"star"},
+      {id:7,title:"About Us",type:"about",icon:"info"}
+    ]
+  },
+  franchise:{
+    enabled:true,
+    title:"Own an Al-Malaika Life Style Salon Franchise",
+    subtitle:"Start your premium grooming business with Al-Malaika",
+    description:"Join the Al-Malaika Life Style Salon family and become a part of one of Hazaribagh's most loved family grooming brands. We provide complete business support including salon setup, interior design, staff training, branding, marketing assistance, software support, and operational guidance.",
+    investment:"₹8 Lakhs - ₹20 Lakhs",
+    franchiseFee:"₹50,000",
+    shopArea:"300 - 800 sq. ft.",
+    preferredLocation:"High street, market area, shopping complex or residential hub",
+    expectedROI:"18 - 24 Months",
+    support:["Salon Interior Design","Business Setup Support","Professional Staff Training","Marketing & Branding","Premium Product Supply","Billing & Booking Software","Operations Training","Grand Opening Assistance"],
+    requirements:["Minimum 300 sq. ft. commercial shop","Basic business registration","Passion for customer service","Investment capability","Prime business location"],
+    benefits:["Established Brand Recognition","Low Risk Business Model","Complete Technical Support","National Marketing Campaigns","Continuous Training Programs","High Growth Potential"],
+    contactPerson:"Md Arif Hussain",
+    contactNumber:"+91 97081 01242",
+    email:"franchise@almalaikasalon.in",
+    whatsApp:"https://wa.me/919708101242",
+    website:"https://er-md-hafiz.github.io/salon/",
+    bannerImage:"https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?auto=format&fit=crop&w=1200&q=80"
+  }
+};
+
+/* =========================================================
+   HELPERS
+   ========================================================= */
+const $  = (s,c=document)=>c.querySelector(s);
+const $$ = (s,c=document)=>Array.from(c.querySelectorAll(s));
+const R  = n => '₹' + Number(n).toLocaleString('en-IN');
+const E  = encodeURIComponent;
+const WA_NUM = DATA.salon.whatsappUrl.replace(/\D/g,'');
+const waLink = t => `https://wa.me/${WA_NUM}?text=${E(t)}`;
+const CAT_LABEL = {HAIR:"Hair",BEARD:"Beard",SPA:"Spa & Hair Spa",FACIAL:"Facial & Skin",MASSAGE:"Massage",KIDS:"Kids",PACKAGE:"Packages",SERVICES:"Services",OFFERS:"Offers",HOME:"Home Service"};
+
+function setTxt(sel, val, ctx=document){
+  const el = $(sel, ctx);
+  if(el) el.textContent = val;
+  return el;
+}
+function stars(n){
+  const full = Math.round(n);
+  return '★'.repeat(full) + '☆'.repeat(5-full);
+}
+function toast(msg){
+  const t = $('#toast'); if(!t) return;
+  t.textContent = msg; t.classList.add('o');
+  clearTimeout(t._t); t._t = setTimeout(()=>t.classList.remove('o'), 2600);
+}
+
+/* =========================================================
+   STATIC BINDINGS
+   ========================================================= */
+const S = DATA.salon, P = DATA.profile;
+
+// links
+$$('[data-wa]').forEach(a=>a.href = waLink("Hello Al-Malaika Life Style Salon, I would like to book a service."));
+$$('[data-tel]').forEach(a=>a.href = 'tel:' + S.mobileNumber);
+$$('[data-ig]').forEach(a=>a.href = S.social.instagram);
+$$('[data-fb]').forEach(a=>a.href = S.social.facebook);
+
+const DIR_URL = `https://www.google.com/maps/dir/?api=1&destination=${E(S.address)}`;
+if($('#dir'))  $('#dir').href  = DIR_URL;
+if($('#dir2')) $('#dir2').href = DIR_URL;
+if($('#gr'))   $('#gr').href   = `https://www.google.com/maps/search/?api=1&query=${E(S.name + ' ' + S.address)}`;
+if($('#mapFrame')) $('#mapFrame').src = S.mapsEmbedUrl;
+if($('#frImg'))    $('#frImg').src    = DATA.franchise.bannerImage;
+
+// text bindings
+setTxt('#heroLoc', 'Hazaribagh • Jharkhand');
+setTxt('#heroSub', DATA.banners[0].subtitle);
+setTxt('#hRating', S.rating);
+setTxt('#hReviews', S.totalReviews);
+setTxt('#hHours', S.openingHours);
+setTxt('#locName', S.name);
+setTxt('#locAddr', S.address);
+setTxt('#locDays', S.workingDays);
+setTxt('#locHours', S.openingHours);
+setTxt('#locPhone', S.mobileNumber);
+setTxt('#ctaPhone', S.mobileNumberDial);
+setTxt('#fAbout', S.about);
+setTxt('#appVer', P.appVersion);
+setTxt('#lastUp', DATA.metadata.lastUpdated);
+setTxt('#year', new Date().getFullYear());
+
+const locMail = $('#locMail');
+if(locMail){ locMail.textContent = S.email; locMail.href = 'mailto:' + S.email; }
+const fContact = $('#fContact');
+if(fContact){
+  fContact.innerHTML = `${S.address}<br><a href="tel:${S.mobileNumber}">${S.mobileNumber}</a><br><a href="mailto:${S.email}">${S.email}</a>`;
+}
+if($('#fPlay'))      $('#fPlay').href      = S.playStoreUrl;
+if($('#fPrivacy'))   $('#fPrivacy').href   = P.privacyPolicyUrl;
+if($('#fTerms'))     $('#fTerms').href     = P.termsUrl;
+if($('#fAboutLink')) $('#fAboutLink').href = P.aboutUs;
+
+// marquee
+const marqItems = ['Hair','Beard','Facial','Hair Spa','Massage','Hair Colour','Kids Grooming','Home Service','Groom Packages'];
+const marqEl = $('#marq');
+if(marqEl) marqEl.innerHTML = [...marqItems, ...marqItems].map(t=>`<span>${t}</span>`).join('');
+
+// why us
+$('#whyGrid').innerHTML = DATA.whyChooseUs.map(w=>`
+  <div class="rv">
+    <span class="material-symbols-outlined" style="font-size:30px;color:var(--gold)">${w.icon}</span>
+    <h3 style="font-size:1.5rem;margin:14px 0 8px">${w.title}</h3>
+    <p style="color:var(--grey);font-size:.9rem;margin:0">${w.description}</p>
+  </div>`).join('');
+
+// categories
+$('#cats').innerHTML = DATA.banners.map(b=>`
+  <a class="cat" href="#" data-book>
+    <div class="ph"><img src="${b.imageUrl}" alt="${b.title}" loading="lazy"></div>
+    <div class="cat-t">
+      <small>${CAT_LABEL[b.category]||b.category}</small>
+      <h3>${b.title}</h3>
+      <p>${b.subtitle}</p>
+    </div>
+  </a>`).join('');
+
+// quick services
+$('#quickGrid').innerHTML = DATA.quickServices.map(s=>`
+  <article class="scard rv">
+    <div class="ph"><img src="${s.imageUrl}" alt="${s.name}" loading="lazy"></div>
+    <div class="scard-b">
+      <span class="tagpill">${CAT_LABEL[s.category]||s.category}</span>
+      <h3>${s.name}</h3>
+      <p>${s.description}</p>
+      <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:6px">
+        <span class="price">${R(s.price)}</span>
+        <button class="btn sm" data-book data-service="${s.name}">Book</button>
+      </div>
+    </div>
+  </article>`).join('');
+
+// popular services
+$('#popGrid').innerHTML = DATA.popularServices.map(s=>`
+  <article class="scard rv">
+    <div class="ph"><img src="${s.imageUrl}" alt="${s.name}" loading="lazy"></div>
+    <div class="scard-b">
+      <span class="tagpill">${CAT_LABEL[s.category]||s.category}</span>
+      <h3>${s.name}</h3>
+      <p>${s.description}</p>
+      <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:6px">
+        <span class="price">${R(s.price)}</span>
+        <button class="btn sm" data-book data-service="${s.name}">Book</button>
+      </div>
+    </div>
+  </article>`).join('');
+
+// offers
+$('#offerGrid').innerHTML = DATA.offers.map(o=>`
+  <div class="offer rv">
+    <img src="${o.imageUrl}" alt="" loading="lazy">
+    <span style="position:absolute;inset:0;z-index:-1;background:linear-gradient(135deg,${o.gradientStartHex},${o.gradientEndHex});opacity:.92"></span>
+    <small>${o.validUntil}</small>
+    <div class="disc">${o.discountText}</div>
+    <h3>${o.title}</h3>
+    <p>${o.subtitle}</p>
+    <div style="margin-top:16px"><button class="btn sm" data-book>Book Now</button></div>
+  </div>`).join('');
+
+// price list
+const priceCats = [...new Set(DATA.priceList.map(p=>p.category))];
+$('#plwrap').innerHTML = priceCats.map(c=>`
+  <div class="plg">
+    <h3>${CAT_LABEL[c]||c}</h3>
+    ${DATA.priceList.filter(p=>p.category===c).map(p=>`
+      <a class="pr" href="#" data-book data-service="${p.name}">
+        <span>${p.name}<small>${p.description}</small></span>
+        <b>${R(p.price)}</b>
+      </a>`).join('')}
+  </div>`).join('');
+
+// team
+$('#teamGrid').innerHTML = DATA.barbers.map(b=>`
+  <div class="member rv">
+    ${b.imageUrl
+      ? `<div class="ph"><img src="${b.imageUrl}" alt="${b.name}" loading="lazy"></div>`
+      : `<div class="ph ava">✦</div>`}
+    <h3>${b.name}</h3>
+    <p>${b.expertise}</p>
+  </div>`).join('');
+
+// gallery
+$('#gl').innerHTML = DATA.galleryItems.map((g,i)=>`
+  <button type="button" data-i="${i}" aria-label="View ${g.title}">
+    <div class="ph" style="aspect-ratio:${g.aspectRatio}">
+      <img src="${g.imageUrl}" alt="${g.title}" loading="lazy">
+      <span class="cap">${g.title}</span>
+    </div>
+  </button>`).join('');
+
+// reviews
+setTxt('#rScore', S.rating);
+setTxt('#rStars', stars(S.rating));
+setTxt('#rCount', S.totalReviews);
+$('#revGrid').innerHTML = DATA.reviews.map(r=>`
+  <div class="rev rv">
+    <div class="rev-h">
+      <div class="init">${r.initials}</div>
+      <div>
+        <h4>${r.name}</h4>
+        <small>${r.date}</small>
+      </div>
+      <div class="stars" style="margin-left:auto;font-size:.85rem">${stars(r.rating)}</div>
+    </div>
+    <p>“${r.comment}”</p>
+  </div>`).join('');
+
+// home service
+const HB = DATA.homeServiceBooking;
+setTxt('#homeMsg', HB.bookingMessage);
+setTxt('#hMin', R(HB.minimumBookingAmount));
+setTxt('#hCharge', R(HB.serviceCharge));
+setTxt('#hFree', R(HB.freeServiceChargeAbove));
+setTxt('#hAdv', HB.advanceBookingHours + ' hours');
+$('#hv').innerHTML = DATA.homeServices.map(h=>`
+  <a href="#" data-book="home" data-service="${h.name}">
+    <span>${h.name}<small>${h.description}</small></span>
+    <b>${R(h.price)}</b>
+  </a>`).join('');
+$('#homeSlots').innerHTML = HB.timeSlots.map(t=>`<span class="slot ${t.isAvailable?'on':'off'}">${t.time}</span>`).join('');
+
+// franchise
+const F = DATA.franchise;
+setTxt('#frDesc', F.description);
+setTxt('#frInv', F.investment);
+setTxt('#frFee', F.franchiseFee);
+setTxt('#frArea', F.shopArea);
+setTxt('#frRoi', F.expectedROI);
+setTxt('#frLoc', F.preferredLocation);
+$('#frSupport').innerHTML = F.support.map(x=>`<li>${x}</li>`).join('');
+$('#frReq').innerHTML     = F.requirements.map(x=>`<li>${x}</li>`).join('');
+$('#frBen').innerHTML     = F.benefits.map(x=>`<li>${x}</li>`).join('');
+$('#frWa').href   = waLink(`Hello Al-Malaika Life Style Salon, I am interested in the franchise opportunity (${F.title}). Please share more details.`);
+$('#frMail').href = `mailto:${F.email}?subject=${E('Franchise Enquiry — Al-Malaika Life Style Salon')}`;
+
+/* =========================================================
+   OPEN / CLOSED STATUS  (Asia/Kolkata)
+   ========================================================= */
+(function status(){
+  const parts = new Intl.DateTimeFormat('en-GB',{timeZone:'Asia/Kolkata',hour:'2-digit',minute:'2-digit',hour12:false}).formatToParts(new Date());
+  const hh = +parts.find(p=>p.type==='hour').value;
+  const mm = +parts.find(p=>p.type==='minute').value;
+  const cur = hh*60 + mm;
+  const open = 8*60, close = 22*60;   // 08:00 – 22:00 (10 PM)
+  const isOpen = cur >= open && cur < close;
+  const dot = $('#dot'), st = $('#openState');
+  if(!dot || !st) return;
+  if(isOpen){ dot.classList.add('on'); st.textContent = 'Open now · closes 10:00 PM'; }
+  else { st.textContent = 'Closed now · opens 8:00 AM'; }
+})();
+
+/* =========================================================
+   HEADER · MENU · THEME · REVEAL
+   ========================================================= */
+const hd = $('#hd');
+addEventListener('scroll', ()=>{
+  hd.classList.toggle('s', scrollY > 40);
+},{passive:true});
+
+const menu = $('#menu');
+function setMenu(open){
+  menu.classList.toggle('o', open);
+  menu.setAttribute('aria-hidden', String(!open));
+  $('#mo').setAttribute('aria-expanded', String(open));
+  document.body.style.overflow = open ? 'hidden' : '';
+}
+$('#mo').onclick = ()=>setMenu(true);
+$('#mx').onclick = ()=>setMenu(false);
+$$('#menu a').forEach(a=>a.addEventListener('click',()=>setMenu(false)));
+
+// theme
+const root = document.documentElement;
+const themeBtn = $('#themeBtn');
+function setTheme(t){
+  root.setAttribute('data-theme', t);
+  themeBtn.innerHTML = `<span class="material-symbols-outlined">${t==='dark'?'dark_mode':'light_mode'}</span>`;
+  try{ localStorage.setItem('almalaika-theme', t); }catch(e){}
+}
+let savedTheme = 'dark';
+try{ savedTheme = localStorage.getItem('almalaika-theme') || 'dark'; }catch(e){}
+setTheme(savedTheme);
+themeBtn.onclick = ()=> setTheme(root.getAttribute('data-theme')==='dark' ? 'light' : 'dark');
+
+// reveal on scroll
+const io = new IntersectionObserver((entries)=>{
+  entries.forEach(en=>{ if(en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target);} });
+},{threshold:.1, rootMargin:'0px 0px -40px 0px'});
+$$('.rv').forEach(el=>io.observe(el));
+
+/* =========================================================
+   HERO SLIDER
+   ========================================================= */
+(function initHeroSlider(){
+  const el = $('.heroSwiper');
+  if(!el) return;
+
+  if(typeof Swiper === 'undefined'){
+    el.classList.add('swiper-initialized');
+    console.warn('Swiper not loaded — hero slider running in static fallback mode.');
+    return;
+  }
+
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  new Swiper(el, {
+    loop: true,
+    effect: 'fade',
+    fadeEffect: { crossFade: true },
+    speed: 900,
+    grabCursor: true,
+    watchSlidesProgress: true,
+    autoplay: reduceMotion ? false : {
+      delay: 5500,
+      disableOnInteraction: false,
+      pauseOnMouseEnter: true
+    },
+    pagination: {
+      el: '.heroSwiper .swiper-pagination',
+      clickable: true
+    },
+    navigation: {
+      nextEl: '.heroSwiper .swiper-button-next',
+      prevEl: '.heroSwiper .swiper-button-prev'
+    },
+    a11y: {
+      enabled: true,
+      prevSlideMessage: 'Previous slide',
+      nextSlideMessage: 'Next slide',
+      paginationBulletMessage: 'Go to slide {{index}}'
+    }
+  });
+})();
+
+/* =========================================================
+   LIGHTBOX
+   ========================================================= */
+let lbIndex = 0;
+function openLb(i){
+  lbIndex = i;
+  const g = DATA.galleryItems[i];
+  $('#limg').src = g.imageUrl.replace('w=400','w=1200').replace('w=870','w=1200');
+  $('#limg').alt = g.title;
+  $('#lcap').textContent = g.title;
+  $('#lbx').classList.add('o');
+  document.body.style.overflow = 'hidden';
+}
+function closeLb(){ $('#lbx').classList.remove('o'); document.body.style.overflow=''; }
+function stepLb(d){
+  lbIndex = (lbIndex + d + DATA.galleryItems.length) % DATA.galleryItems.length;
+  openLb(lbIndex);
+}
+$$('#gl button').forEach(b=> b.onclick = ()=> openLb(+b.dataset.i));
+$('#lx').onclick  = closeLb;
+$('#lpv').onclick = ()=>stepLb(-1);
+$('#lnx').onclick = ()=>stepLb(1);
+$('#lbx').addEventListener('click', e=>{ if(e.target.id==='lbx') closeLb(); });
+
+addEventListener('keydown', e=>{
+  if(e.key==='Escape'){ setMenu(false); closeBook(); closeLb(); }
+  if(!$('#lbx').classList.contains('o')) return;
+  if(e.key==='ArrowLeft')  stepLb(-1);
+  if(e.key==='ArrowRight') stepLb(1);
+});
+
+/* =========================================================
+   BOOKING FLOW
+   ========================================================= */
+const TOTAL_STEPS = 6;
+let step = 0;
+let visitType = 'salon';
+let chosenBarber = DATA.barbers[0].name;
+let chosenTime = '';
+
+const bkEl  = $('#bk');
+const steps = $$('#bk .stp');
+
+(function buildServices(){
+  const sel = $('#fService');
+  const groups = [...new Set(DATA.priceList.map(p=>p.category))];
+  groups.forEach(c=>{
+    const og = document.createElement('optgroup');
+    og.label = CAT_LABEL[c] || c;
+    DATA.priceList.filter(p=>p.category===c).forEach(p=>{
+      const o = document.createElement('option');
+      o.value = p.name;
+      o.textContent = `${p.name} — ${R(p.price)}`;
+      o.dataset.price = p.price;
+      og.appendChild(o);
+    });
+    sel.appendChild(og);
+  });
+  const og = document.createElement('optgroup');
+  og.label = 'Home Service';
+  DATA.homeServices.forEach(h=>{
+    const o = document.createElement('option');
+    o.value = h.name;
+    o.textContent = `${h.name} — ${R(h.price)}`;
+    o.dataset.price = h.price;
+    og.appendChild(o);
+  });
+  sel.appendChild(og);
+  sel.onchange = updateHint;
+  updateHint();
+})();
+
+function currentPrice(){
+  const sel = $('#fService');
+  const o = sel.options[sel.selectedIndex];
+  return o ? +o.dataset.price : 0;
+}
+function updateHint(){
+  const p = currentPrice();
+  const isHome = visitType === 'home';
+  let txt = `Selected: ${$('#fService').value} · ${R(p)}`;
+  if(isHome){
+    const charge = p >= HB.freeServiceChargeAbove ? 0 : HB.serviceCharge;
+    txt += charge ? ` + ${R(charge)} service charge = ${R(p+charge)}` : ' · free service charge';
+    if(p < HB.minimumBookingAmount) txt += ` · minimum booking is ${R(HB.minimumBookingAmount)}`;
+  }
+  $('#svcHint').textContent = txt;
+}
+
+$('#barberChips').innerHTML = DATA.barbers.map((b,i)=>
+  `<button type="button" class="chip ${i===0?'sel':''}" data-barber="${b.name}">${b.name}${b.id===1?'':' · '+b.expertise.split('—')[0].trim()}</button>`
+).join('');
+$$('#barberChips .chip').forEach(c=>c.onclick = ()=>{
+  $$('#barberChips .chip').forEach(x=>x.classList.remove('sel'));
+  c.classList.add('sel');
+  chosenBarber = c.dataset.barber;
+});
+
+const fDate = $('#fDate');
+(function setDateMin(){
+  const t = new Date();
+  const iso = t.toISOString().slice(0,10);
+  fDate.min = iso; fDate.value = iso;
+})();
+$('#dateChips').innerHTML = ['Today','Tomorrow'].map((l,i)=>
+  `<button type="button" class="chip" data-day="${i}">${l}</button>`).join('');
+$$('#dateChips .chip').forEach(c=>c.onclick = ()=>{
+  const d = new Date(); d.setDate(d.getDate() + (+c.dataset.day));
+  fDate.value = d.toISOString().slice(0,10);
+  $$('#dateChips .chip').forEach(x=>x.classList.remove('sel'));
+  c.classList.add('sel');
+});
+
+function buildTimes(){
+  const slots = visitType === 'home' ? HB.timeSlots : DATA.timeSlots;
+  $('#timeChips').innerHTML = slots.map(s=>
+    `<button type="button" class="chip ${s.isAvailable?'':'off'}" data-time="${s.time}" ${s.isAvailable?'':'disabled'}>${s.time}</button>`
+  ).join('');
+  $$('#timeChips .chip').forEach(c=>{
+    if(c.disabled) return;
+    c.onclick = ()=>{
+      $$('#timeChips .chip').forEach(x=>x.classList.remove('sel'));
+      c.classList.add('sel');
+      chosenTime = c.dataset.time;
+    };
+  });
+  chosenTime = '';
+}
+
+function syncVisitUI(){
+  const home = visitType === 'home';
+  $$('#visitChips .chip').forEach(x=>x.classList.toggle('sel', x.dataset.visit === visitType));
+  $('#addrWrap').style.display = home ? 'block' : 'none';
+  $('#visitHint').textContent = home
+    ? `Home service · minimum ${R(HB.minimumBookingAmount)} · service charge ${R(HB.serviceCharge)} (free above ${R(HB.freeServiceChargeAbove)}) · slots 9 AM – 7 PM · book ${HB.advanceBookingHours}h ahead.`
+    : 'Visit our salon at Alfalah Colony, Pugmil, Hazaribagh. Open daily 8 AM – 10 PM.';
+  buildTimes();
+  updateHint();
+}
+$$('#visitChips .chip').forEach(c=>c.onclick = ()=>{
+  visitType = c.dataset.visit;
+  syncVisitUI();
+});
+
+function render(){
+  steps.forEach((s,i)=>s.classList.toggle('on', i===step));
+  $('#pg').textContent = step < TOTAL_STEPS ? `STEP 0${step+1} / 0${TOTAL_STEPS}` : 'REQUEST READY';
+  $('#pbar').style.width = Math.min(100, (step / (TOTAL_STEPS-1)) * 100) + '%';
+  $('#fErr').textContent = '';
+  $('#bkNav').style.display = step >= TOTAL_STEPS ? 'none' : 'flex';
+  $('#pv').style.visibility = step === 0 ? 'hidden' : 'visible';
+  $('#nx').textContent = step === TOTAL_STEPS-1 ? 'Confirm Booking' : 'Next';
+  bkEl.scrollTop = 0;
+}
+function go(n){ step = Math.max(0, Math.min(TOTAL_STEPS, n)); render(); }
+
+function openBook(service, home){
+  if(home) visitType = 'home';
+  if(service){
+    const sel = $('#fService');
+    if(Array.from(sel.options).some(o=>o.value === service)) sel.value = service;
+  }
+  syncVisitUI();
+  bkEl.classList.add('o');
+  document.body.style.overflow = 'hidden';
+  go(0);
+}
+function closeBook(){ bkEl.classList.remove('o'); document.body.style.overflow=''; }
+
+$('#bx').onclick = closeBook;
+$('#pv').onclick = ()=> go(step-1);
+
+$('#nx').onclick = ()=>{
+  const err = $('#fErr');
+  err.textContent = '';
+
+  if(step === 0 && !$('#fService').value){ err.textContent='Please select a service.'; return; }
+  if(step === 2 && !fDate.value){ err.textContent='Please choose a date.'; return; }
+  if(step === 3 && !chosenTime){ err.textContent='Please choose a time slot.'; return; }
+  if(step === 4 && visitType === 'home' && !$('#fAddr').value.trim()){ err.textContent='Please enter your address and landmark.'; return; }
+
+  if(step === 5){
+    const name  = $('#fName').value.trim();
+    const phone = $('#fPhone').value.replace(/\D/g,'').slice(-10);
+    if(!name){ err.textContent='Please enter your name.'; return; }
+    if(!/^[6-9]\d{9}$/.test(phone)){ err.textContent='Please enter a valid 10-digit mobile number.'; return; }
+    return confirmBooking(name, phone);
+  }
+  go(step+1);
+};
+
+function confirmBooking(name, phone){
+  const id = 'AML-' + Math.random().toString(36).slice(2,7).toUpperCase();
+  const service = $('#fService').value;
+  const price = currentPrice();
+  const home = visitType === 'home';
+  const charge = home ? (price >= HB.freeServiceChargeAbove ? 0 : HB.serviceCharge) : 0;
+  const total = price + charge;
+  const notes = $('#fNotes').value.trim();
+  const addr  = $('#fAddr').value.trim();
+
+  const msg =
+`Hello Al-Malaika Life Style Salon, I would like to book a service.
+
+Request ID: ${id}
+Name: ${name}
+Mobile: ${phone}
+Service: ${service}
+Stylist: ${chosenBarber}
+Preferred Date: ${fDate.value}
+Preferred Time: ${chosenTime}
+Visit Type: ${home ? 'Home Service' : 'Salon Visit'}${home ? `\nAddress: ${addr}` : ''}
+Estimated Amount: ${R(total)}${charge ? ` (incl. ${R(charge)} service charge)` : ''}${notes ? `\nNotes: ${notes}` : ''}`;
+
+  $('#stConfirm').innerHTML = `
+    <label style="margin-top:22px">Booking summary</label>
+    <div class="sum">
+      <b>Request ID</b> · ${id}<br>
+      <b>Customer</b> · ${name} (${phone})<br>
+      <b>Service</b> · ${service}<br>
+      <b>Stylist</b> · ${chosenBarber}<br>
+      <b>Date &amp; time</b> · ${fDate.value} at ${chosenTime}<br>
+      <b>Visit</b> · ${home ? 'Home service' : 'Salon visit'}${home ? `<br><b>Address</b> · ${addr}` : ''}<br>
+      <b>Estimated total</b> · ${R(total)}${charge ? ` <span style="font-size:.8rem">(incl. ${R(charge)} service charge)</span>` : ''}
+    </div>
+    <p class="t" style="margin-top:16px;font-size:.86rem">Tap <b style="color:var(--off)">Send on WhatsApp</b> so the salon receives your request and confirms your slot.</p>
+    <div class="row">
+      <a class="btn g" href="${waLink(msg)}" target="_blank" rel="noopener">Send on WhatsApp</a>
+      <a class="btn" href="tel:${S.mobileNumber}">Call Salon</a>
+    </div>`;
+
+  go(TOTAL_STEPS);
+  window.open(waLink(msg), '_blank', 'noopener');
+  toast('Booking request created · ' + id);
+}
+
+document.addEventListener('click', e=>{
+  const t = e.target.closest('[data-book]');
+  if(!t) return;
+  e.preventDefault();
+  setMenu(false);
+  openBook(t.dataset.service || '', t.dataset.book === 'home');
+});
+
+render();
+</script>
 </body>
 </html>
